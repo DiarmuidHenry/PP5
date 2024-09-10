@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-diarmuidhenry-pp5-0pvujz1knqh.ws.codeinstitute-ide.net',
+    '8000-diarmuidhenry-pp5-if792jp2xw9.ws.codeinstitute-ide.net'
     ]
 
 CSRF_TRUSTED_ORIGINS = [
