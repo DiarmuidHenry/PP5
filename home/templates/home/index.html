@@ -1,6 +1,27 @@
 {% extends "base.html" %}
 {% load static ‰}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-8 col-md-6 my-auto"></div>
+        <h1 class="display-4 logo-font text-black">
+            See our newest products
+        </h1>
+        <div class="my-5">
+            <h4>
+                <a href="" class="shop-now-button btn btn-large py-3">Buy Now</a>
+            </h4>
+        </div>
+    </div>
+</div>
 <h1 class="display-4 text-success">The homepage setup is correct.</h1>
 {% endblock %}
