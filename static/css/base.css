@@ -1,12 +1,64 @@
+/* Set colour palette as variables */
+:root {
+    --color-1: #82A67D; /* Background Green */
+    --color-2: #4E7D48; /* Button Green */
+    --color-3: #154C0E; /* Intense Green */
+    --color-4: #BFA689; /* Pale Brown */
+    --color-5: #8A704F; /* Darker Brown */
+}
+
+/* Class to apply colour scheme colours */
+.text-color-1 {
+    color: var(--color-1);
+}
+  
+.text-color-2 {
+color: var(--color-2);
+}
+
+.text-color-3 {
+color: var(--color-3);
+}
+
+.text-color-4 {
+color: var(--color-4);
+}
+
+.text-color-5 {
+color: var(--color-5);
+}
+
+.background-color-1 {
+    background-color: var(--color-1);
+}
+
+.background-color-2 {
+    background-color: var(--color-2);
+}
+
+.background-color-3 {
+    background-color: var(--color-3);
+}
+
+.background-color-4 {
+    background-color: var(--color-4);
+}
+
+.background-color-5 {
+    background-color: var(--color-5);
+}
+
+
 html {
     height: 100%;
 }
 
 body {
     background: url('/media/background_large.jpg') no-repeat center center fixed;
+    /* background-color: var(--color-1); */
     background-size: cover;
     height: calc(100vh - 160px);
-    color: #82A67D;
+    color: var(--color-1);
     font-family: 'roboto';
 }
 
@@ -27,8 +79,8 @@ body {
 }
 
 .shop-now-button {
-    background: #4E7D48;
-    color: #BFA689;
+    background: var(--color-2);
+    color: var(--color-4);
     min-width: 260px;
 }
 
@@ -38,8 +90,8 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #154C0E;
-    color:  #BFA689;
+    background: var(--color-3);
+    color:  var(--color-4);
 }
 
 .text-black {
