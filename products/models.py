@@ -12,6 +12,10 @@ class UserProfile(models.Model):
 
 # Compartmentalise items into different categories and subcategories
 class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=50)
     parent = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True, related_name='subcategories')
 
