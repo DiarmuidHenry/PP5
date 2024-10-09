@@ -1,0 +1,380 @@
+[
+    {
+        "model": "products.product",
+        "pk": 1,
+        "fields": {
+            "name": "Men's Shaving Cream",
+            "sku": "MH001",
+            "description": "Smooth shaving cream for sensitive skin",
+            "price": "12.99",
+            "category": 2,
+            "co2_footprint": 0.5,
+            "stock": 100,
+            "options": {"size": ["100ml", "200ml"], "type": ["sensitive", "normal"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "name": "Men's Deodorant",
+            "sku": "MH002",
+            "description": "24-hour protection deodorant",
+            "price": "8.99",
+            "category": 2,
+            "co2_footprint": 0.3,
+            "stock": 150,
+            "options": {"size": ["50ml", "75ml"], "scent": ["original", "sport"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "name": "Men's Hair Gel",
+            "sku": "MH003",
+            "description": "Strong hold styling gel for men",
+            "price": "9.99",
+            "category": 2,
+            "co2_footprint": 0.4,
+            "stock": 120,
+            "options": {"size": ["150ml", "250ml"], "hold": ["medium", "strong"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "name": "Women's Face Moisturizer",
+            "sku": "WH001",
+            "description": "Hydrating daily face moisturizer",
+            "price": "15.99",
+            "category": 3,
+            "co2_footprint": 0.4,
+            "stock": 120,
+            "options": {"size": ["50ml", "100ml"], "skin_type": ["dry", "normal", "oily"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "name": "Women's Shampoo",
+            "sku": "WH002",
+            "description": "Nourishing shampoo for all hair types",
+            "price": "11.99",
+            "category": 3,
+            "co2_footprint": 0.3,
+            "stock": 140,
+            "options": {"size": ["250ml", "400ml"], "hair_type": ["normal", "dry", "oily"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "name": "Women's Body Lotion",
+            "sku": "WH003",
+            "description": "Rich, hydrating body lotion",
+            "price": "13.99",
+            "category": 3,
+            "co2_footprint": 0.4,
+            "stock": 100,
+            "options": {"size": ["200ml", "400ml"], "scent": ["unscented", "lavender", "vanilla"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "name": "All-Purpose Kitchen Cleaner",
+            "sku": "KC001",
+            "description": "Powerful kitchen surface cleaner",
+            "price": "6.99",
+            "category": 5,
+            "co2_footprint": 0.2,
+            "stock": 200,
+            "options": {"size": ["500ml", "1L"], "type": ["regular", "antibacterial"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 8,
+        "fields": {
+            "name": "Dishwasher Tablets",
+            "sku": "KC002",
+            "description": "Eco-friendly dishwasher detergent tablets",
+            "price": "15.99",
+            "category": 5,
+            "co2_footprint": 0.1,
+            "stock": 150,
+            "options": {"count": ["30 tablets", "60 tablets"], "type": ["regular", "intensive"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 9,
+        "fields": {
+            "name": "Kitchen Drain Cleaner",
+            "sku": "KC003",
+            "description": "Powerful enzyme-based drain cleaner",
+            "price": "8.99",
+            "category": 5,
+            "co2_footprint": 0.3,
+            "stock": 120,
+            "options": {"size": ["500ml", "1L"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 10,
+        "fields": {
+            "name": "Bathroom Tile Cleaner",
+            "sku": "BC001",
+            "description": "Anti-mold bathroom tile cleaner",
+            "price": "7.99",
+            "category": 6,
+            "co2_footprint": 0.3,
+            "stock": 180,
+            "options": {"size": ["750ml"], "application": ["spray", "foam"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 11,
+        "fields": {
+            "name": "Toilet Bowl Cleaner",
+            "sku": "BC002",
+            "description": "Deep cleaning toilet gel",
+            "price": "5.99",
+            "category": 6,
+            "co2_footprint": 0.2,
+            "stock": 200,
+            "options": {"size": ["750ml"], "type": ["regular", "limescale removal"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 12,
+        "fields": {
+            "name": "Shower Glass Cleaner",
+            "sku": "BC003",
+            "description": "Streak-free shower glass cleaner",
+            "price": "6.99",
+            "category": 6,
+            "co2_footprint": 0.2,
+            "stock": 150,
+            "options": {"size": ["500ml"], "type": ["regular", "hard water"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 13,
+        "fields": {
+            "name": "Eco-friendly Laundry Detergent",
+            "sku": "LD001",
+            "description": "Plant-based laundry detergent",
+            "price": "14.99",
+            "category": 7,
+            "co2_footprint": 0.1,
+            "stock": 150,
+            "options": {"size": ["1L", "2L"], "scent": ["fresh", "unscented"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 14,
+        "fields": {
+            "name": "Fabric Softener",
+            "sku": "LD002",
+            "description": "Natural fabric softener",
+            "price": "9.99",
+            "category": 7,
+            "co2_footprint": 0.2,
+            "stock": 140,
+            "options": {"size": ["1L", "1.5L"], "type": ["regular", "sensitive"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 15,
+        "fields": {
+            "name": "Stain Remover",
+            "sku": "LD003",
+            "description": "Powerful eco-friendly stain remover",
+            "price": "7.99",
+            "category": 7,
+            "co2_footprint": 0.2,
+            "stock": 160,
+            "options": {"size": ["500ml"], "type": ["all-purpose", "grease-specific"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 16,
+        "fields": {
+            "name": "Stainless Steel Spatula",
+            "sku": "KU001",
+            "description": "Professional-grade kitchen spatula",
+            "price": "9.99",
+            "category": 9,
+            "co2_footprint": 0.2,
+            "stock": 100,
+            "options": {"handle": ["rubber", "steel"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 17,
+        "fields": {
+            "name": "Wooden Spoon Set",
+            "sku": "KU002",
+            "description": "Set of 3 sustainable wooden cooking spoons",
+            "price": "12.99",
+            "category": 9,
+            "co2_footprint": 0.1,
+            "stock": 80,
+            "options": {"wood_type": ["bamboo", "beech"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 18,
+        "fields": {
+            "name": "Silicone Whisk",
+            "sku": "KU003",
+            "description": "Non-scratch silicone-coated whisk",
+            "price": "8.99",
+            "category": 9,
+            "co2_footprint": 0.2,
+            "stock": 120,
+            "options": {"size": ["small", "large"], "color": ["black", "red"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 19,
+        "fields": {
+            "name": "Glass Food Container Set",
+            "sku": "KP001",
+            "description": "Airtight glass food storage containers",
+            "price": "24.99",
+            "category": 10,
+            "co2_footprint": 0.5,
+            "stock": 75,
+            "options": {"pieces": ["3-piece", "5-piece"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 20,
+        "fields": {
+            "name": "Reusable Silicone Food Bags",
+            "sku": "KP002",
+            "description": "Leak-proof silicone food storage bags",
+            "price": "16.99",
+            "category": 10,
+            "co2_footprint": 0.3,
+            "stock": 100,
+            "options": {"size": ["medium", "large"], "color": ["clear", "blue"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 21,
+        "fields": {
+            "name": "Beeswax Food Wraps",
+            "sku": "KP003",
+            "description": "Reusable beeswax food wraps",
+            "price": "18.99",
+            "category": 10,
+            "co2_footprint": 0.1,
+            "stock": 90,
+            "options": {"size": ["variety pack"], "pattern": ["solid", "floral"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 22,
+        "fields": {
+            "name": "Organic Pasta",
+            "sku": "KF001",
+            "description": "Premium organic spaghetti",
+            "price": "3.99",
+            "category": 11,
+            "co2_footprint": 0.1,
+            "stock": 300,
+            "options": {"weight": ["500g", "1kg"], "type": ["spaghetti", "penne"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 23,
+        "fields": {
+            "name": "Organic Quinoa",
+            "sku": "KF002",
+            "description": "High-protein organic quinoa",
+            "price": "5.99",
+            "category": 11,
+            "co2_footprint": 0.2,
+            "stock": 200,
+            "options": {"weight": ["500g"], "color": ["white", "red", "mixed"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 24,
+        "fields": {
+            "name": "Organic Olive Oil",
+            "sku": "KF003",
+            "description": "Extra virgin organic olive oil",
+            "price": "11.99",
+            "category": 11,
+            "co2_footprint": 0.3,
+            "stock": 150,
+            "options": {"size": ["500ml", "750ml"], "origin": ["Spain", "Italy"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 25,
+        "fields": {
+            "name": "Microfiber Kitchen Towel",
+            "sku": "KT001",
+            "description": "Super absorbent kitchen towel",
+            "price": "5.99",
+            "category": 12,
+            "co2_footprint": 0.1,
+            "stock": 200,
+            "options": {"color": ["grey", "white", "blue"], "size": ["medium", "large"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 26,
+        "fields": {
+            "name": "Organic Cotton Dish Cloths",
+            "sku": "KT002",
+            "description": "Set of 4 organic cotton dishcloths",
+            "price": "8.99",
+            "category": 12,
+            "co2_footprint": 0.1,
+            "stock": 150,
+            "options": {"color": ["natural", "mixed"], "pack_size": ["4 pieces", "6 pieces"]}
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 27,
+        "fields": {
+            "name": "Bamboo Tea Towels",
+            "sku": "KT003",
+            "description": "Eco-friendly bamboo fiber tea towels",
+            "price": "7.99",
+            "category": 12,
+            "co2_footprint": 0.1,
+            "stock": 180,
+            "options": {"pack_size": ["2 pieces", "4 pieces"], "pattern": ["striped", "solid"]}
+        }
+    }
+]

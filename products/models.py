@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.db.models import Avg 
 
 # Extend the user profile with additional fields
 class UserProfile(models.Model):
