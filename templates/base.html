@@ -42,9 +42,9 @@
   <body>
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row background-color-4 pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link"></a>
-                    <h2 class="logo-font text-black my-0">Sustainable Living</h2>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h2 class="logo-font text-color-3 my-0"><strong>Sustainable Living</strong></h2>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -100,7 +100,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row background-color-5">
+        <div class="row background-color-5 text-color-3">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -111,7 +111,7 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col background-color-4 text-color-3">
-                <h4 class="logo-font my-1">Free tote bag for all orders over €{{ free_tote_bag_threshold }}!</h4>
+                <h4 class="text-color-3 my-1">Free tote bag for all orders over €{{ free_tote_bag_threshold }}!</h4>
             </div>
         </div>
     </header>
