@@ -5,43 +5,47 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0 background-color-5" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item text-black">By Price</a>
-                <a href="" class="dropdown-item text-black ">By Rating</a>
-                <a href="" class="dropdown-item text-black ">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item text-black">By Price</a>
+                <a href="{% url 'products' %}" class="dropdown-item text-black ">By Rating</a>
+                <a href="{% url 'products' %}" class="dropdown-item text-black ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item text-black">All Products</a>
             </div>
         </li>
+        
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold text-black nav-link mr-5" href="#" id="first-category-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                First Category
+            <a class="font-weight-bold text-black nav-link mr-5" href="#" id="first-category-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cleaning Products
             </a>
             <div class="dropdown-menu border-0 background-color-5" aria-labelledby="first-category-link">
-                <a href="" class="dropdown-item text-black">First 1st</a>
-                <a href="" class="dropdown-item text-black">First 2nd</a>
-                <a href="" class="dropdown-item text-black">First 3rd</a>
-                <a href="" class="dropdown-item text-black">First 4th</a>
+                <a href="{% url 'products' %}?category=bathroom" class="dropdown-item text-black">Bathroom</a>
+                <a href="{% url 'products' %}?category=fabrics" class="dropdown-item text-black">Fabrics</a>
+                <a href="{% url 'products' %}?category=kitchen" class="dropdown-item text-black">Kitchen</a>
+                <a href="{% url 'products' %}?category=bathroom,fabrics,kitchen" class="dropdown-item text-black">All Cleaning Products</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold text-black nav-link mr-5" href="#" id="second-category-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Second Category
+                Kitchen Items
             </a>
             <div class="dropdown-menu border-0 background-color-5" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item text-black">Second 1st</a>
-                <a href="" class="dropdown-item text-black">Second 2nd</a>
-                <a href="" class="dropdown-item text-black">Second 3rd</a>
+                <a href="{% url 'products' %}?category=food" class="dropdown-item text-black">Food</a>
+                <a href="{% url 'products' %}?category=packaging" class="dropdown-item text-black">Packaging</a>
+                <a href="{% url 'products' %}?category=towels" class="dropdown-item text-black">Towels</a>
+                <a href="{% url 'products' %}?category=utensils" class="dropdown-item text-black">Utensils</a>
+                <a href="{% url 'products' %}?category=food,packaging,towels,utensils" class="dropdown-item text-black">All Kitchen Items</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold text-black nav-link" href="#" id="third-category-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Third Category
+                Personal Hygiene
             </a>
             <div class="dropdown-menu border-0 background-color-5" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item text-black">Third 1st</a>
-                <a href="" class="dropdown-item text-black">Third 2nd</a>
+                <a href="{% url 'products' %}?category=men" class="dropdown-item text-black">Men</a>
+                <a href="{% url 'products' %}?category=women" class="dropdown-item text-black">Women</a>
+                <a href="{% url 'products' %}?category=men,women" class="dropdown-item text-black">All Personal Hygiene</a>
             </div>
         </li>
     </ul>
