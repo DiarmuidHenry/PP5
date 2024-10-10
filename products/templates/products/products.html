@@ -41,6 +41,15 @@
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 font-weight-bold">€{{ product.price }}</p>
+                                            <p class="mb-2">
+                                                <small class="text-muted">
+                                                    {% if product.category.parent %}
+                                                        {{ product.category.parent.name|capfirst }} - {{ product.category.name|capfirst }}
+                                                    {% else %}
+                                                        {{ product.category.name|capfirst }}
+                                                    {% endif %}
+                                                </small>
+                                            </p>
                                             {% if product.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}
