@@ -17,8 +17,8 @@
                 <h2>Products</h2>
                 {% if current_categories%}
                     {% for cat in current_categories %}
-                        <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ cat.name }}">
-                            <span class="p-2 mt-2 badge badge-white text-black rounded-0 border-0 background-color-4 border-dark">{{ cat.name|capfirst }}</span>
+                        <a class="category-badge fs-2 text-decoration-none" href="{% url 'products' %}?category={{ cat.name }}">
+                            <span class="p-2 fs-1 mt-2 text-black font-weight-bold rounded-0 border-0 background-color-4 border-dark fs-2">{{ cat.name|capfirst }}</span>
                         </a>
                     {% endfor %}
                 {% endif %}
