@@ -61,19 +61,32 @@ def adjust_cart(request, item_id):
     # messages.success(request, f'Updated {product.name} quantity in your cart!')
     # Adjusting quantities to cart
 
+    print("arrived at adjust_cart")
+
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
-    selected_option = request.POST.get('product_option')
+    print(quantity)
+    selected_option = request.POST.get('option')
+    print("selected_option:")
+    print(selected_option)
     cart = request.session.get('cart', {})
-    print(product)
-    print("1")
 
-    if selected_option:
+
+    if selected_option != None:
         print("2")
         unique_key = f"{item_id}--{selected_option}"
     else:
         print("3")
         unique_key = str(item_id)
+
+    print("Attempting to adjust cart with unique_key:", unique_key)
+    print(type(unique_key))
+
+    if unique_key in cart:
+        cart[unique_key]['quantity'] = quantity  # Update the quantity
+    else:
+        print(f"Key {unique_key} not found in cart.")
+
 
     if quantity > 0:
         # Update the cart

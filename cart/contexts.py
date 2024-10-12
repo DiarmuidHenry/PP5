@@ -79,9 +79,10 @@ def cart_contents(request):
     product_count = 0
 
     for unique_key, item_data in cart.items():
-        print(f"Unique Key: {unique_key}, Item Data: {item_data}") 
+        print(f"Unique Key: {unique_key}, Item Data: {item_data}")
 
-    print("cart:")
+    print("type: unique_key")
+
     print(cart)
 
 
