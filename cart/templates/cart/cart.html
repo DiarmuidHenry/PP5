@@ -57,42 +57,9 @@
                                         </td>
                                         <td class="py-2 w-30">
                                             <form class="form update-form" method="POST" action="">
-                                                {% csrf_token %}
+                                                    {% csrf_token %}
                                                 <div class="form-group">
-                                                    <!-- <div class="input-group">
-                                                        <div class="input-group-prepend">
-                                                            <button class="decrement-qty btn btn-black rounded-0 btn-sm" 
-                                                                data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                                                <span>
-                                                                    <i class="fa-solid fa-minus"></i>
-                                                                </span>
-                                                            </button>
-                                                        </div>
-                                                        <input class="form-control form-control-sm qty_input" type="number"
-                                                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                                            data-item_id="{{ item.item_id }}"
-                                                            id="id_qty_{{ item.item_id }}">
-                                                        <div class="input-group-append">
-                                                            <button class="increment-qty btn btn-black rounded-0 btn-sm"
-                                                                data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                                <span>
-                                                                    <i class="fa-solid fa-plus"></i>
-                                                                </span>
-                                                            </button>
-                                                        </div>
-                                                        {% if item.option %}
-                                                            <input type="hidden" name="product_option" value="{{ item.option }}">
-                                                        {% endif %}
-                                                    </div>
-                                                </div>
-                                            </form>
-                                            <div class="d-flex flex-column text-center">
-                                                <a class="update-link text-black d-block"><small>Recalculate</small></a>
-                                                <a class="remove-item text-danger font-weight-bold d-block mb-2" id="remove_{{ item.item_id }}" data-option="{{ item.option }}">
-                                                    <small>Remove</small>
-                                                </a>
-                                                
-                                            </div> -->
+                                                    
                                             <div class="input-group">
     <div class="input-group-prepend qty-controls">
         <button class="decrement-qty btn btn-black rounded-0 btn-sm" 

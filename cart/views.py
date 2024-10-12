@@ -11,7 +11,7 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     # Adding items to cart
 
-    product = get_object_or_404(Product, pk=item_id)
+    product = Product.objects.get(pk=item_id)
 
     quantity = int(request.POST.get('quantity'))
 
@@ -29,18 +29,21 @@ def add_to_cart(request, item_id):
 
     if unique_key in cart:
         cart[unique_key]['quantity'] += quantity
-    else:
+        messages.success(request, f'Added {product.name} to your cart!')
+    else:        
         if selected_option:
             cart[unique_key] = {
                 'product_id': product.id,
                 'quantity': quantity,
                 'option': selected_option,
             }
+            messages.success(request, f'Added {product.name} to your cart!')
         else:
             cart[unique_key] = {
                 'product_id': product.id,
                 'quantity': quantity,
             }
+            messages.success(request, f'Added {product.name} to your cart!')
 
 
     request.session['cart'] = cart
