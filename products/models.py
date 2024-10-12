@@ -34,7 +34,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
     co2_footprint = models.FloatField()
     stock = models.IntegerField()
-    options = models.JSONField()
+    options = models.JSONField(null=True, blank=True)
 
     # Create rating from mean of relevant entries in Rating
     @property

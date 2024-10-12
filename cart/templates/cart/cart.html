@@ -46,6 +46,14 @@
                                         </td>
                                         <td class="py-2 w-50">
                                             <p class="my-0 font-weight-bold">{{ item.product.name }}</p>
+                                                    {% if item.product.options %}
+                                                        {% for option_type, option_values in item.product.options.items %}  
+                                                            {{ option_type|capfirst }}
+                                                            {{ option_values|capfirst }}
+                                                        {% endfor %}
+                                                {% endif %}
+
+                                            </p>
                                             <p class="my-1 text-muted">{{ item.product.description }}</p>
                                         </td>
                                         <td class="py-2">
