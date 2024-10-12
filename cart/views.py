@@ -29,7 +29,11 @@ def add_to_cart(request, item_id):
 
     if unique_key in cart:
         cart[unique_key]['quantity'] += quantity
-        messages.success(request, f'Added {product.name} to your cart!')
+        print("CASE 1")
+        if cart[unique_key]['option']:
+            messages.success(request, f'Added {product.name} - {cart[unique_key]['option'].title()} to your cart!')
+        else:
+            messages.success(request, f'Added {product.name} to your cart!')
     else:        
         if selected_option:
             cart[unique_key] = {
@@ -37,7 +41,7 @@ def add_to_cart(request, item_id):
                 'quantity': quantity,
                 'option': selected_option,
             }
-            messages.success(request, f'Added {product.name} to your cart!')
+            messages.success(request, f'Added {product.name} - {cart[unique_key]['option'].title()} to your cart!')
         else:
             cart[unique_key] = {
                 'product_id': product.id,
@@ -48,3 +52,9 @@ def add_to_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(redirect_url)
+
+# def update_cart(request, item_id):
+#     # messages.success(request, f'Updated {product.name} quantity in your cart!')
+
+# def remove_from_cart(request, item_id):
+#     # messages.success(request, f'Removed {product.name} from your cart.')
