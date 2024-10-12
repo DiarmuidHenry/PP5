@@ -50,15 +50,16 @@
                         {% csrf_token %}
                         <div class="form-row">
                                         <div class="col-12">
-                                            <p><strong>Options:</strong></p>
-                                            <select class="form-control rounded w-50" name="product_option_{{ option_type }}" id="product_option_{{ option_type }}">
-                                                {% for option in product.get_option_list %}
-                                                    <option value="{{ option }}">{{ option|capfirst }}</option>
-                                                {% endfor %}
-                                            </select>
+                                            {% if product.get_options_list %}
+                                                <p><strong>Options:</strong></p>
+                                                <select class="form-control rounded w-50" name="product_option" id="product_option">
+                                                    {% for option in product.get_options_list %}
+                                                        <option value="{{ option }}">{{ option|title }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            {% else %}
+                                            {% endif %}
                                         </div>
-                                    {% endfor %}
-                                {% endif %}
                             <div class="col-12">
                                 <p class="mb-1 mt-2"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
@@ -75,7 +76,6 @@
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-2" value="Add to Cart">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                            {% endwith %}
                         </div>
                     </form>
                 </div>

@@ -34,7 +34,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
     co2_footprint = models.FloatField()
     stock = models.IntegerField()
-    options = models.TextField()  # Comma separated string
+    options = models.TextField(null=True, blank=True)  # Comma separated string
 
     def get_options_list(self):
         return self.options.split(',') if self.options else []
