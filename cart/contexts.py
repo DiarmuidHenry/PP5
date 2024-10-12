@@ -86,12 +86,14 @@ def cart_contents(request):
     for unique_key, item_data in cart.items():
         product = get_object_or_404(Product, pk=item_data['product_id'])  # Retrieve product by ID
         quantity = item_data['quantity']
+        item_id = item_data['product_id']
         selected_option = item_data.get('option')  # Get the selected option if it exists
         item_total = product.price * quantity
         subtotal += item_total
         product_count += quantity
         cart_items.append({
             'product': product,
+            'item_id': item_id,
             'quantity': quantity,
             'option': selected_option,
             'item_total': item_total,

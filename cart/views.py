@@ -56,5 +56,8 @@ def add_to_cart(request, item_id):
 # def update_cart(request, item_id):
 #     # messages.success(request, f'Updated {product.name} quantity in your cart!')
 
-# def remove_from_cart(request, item_id):
-#     # messages.success(request, f'Removed {product.name} from your cart.')
+def remove_from_cart(request, item_id):
+    print("Got to remove_from_cart")
+    print(request)
+    print(item_id)
+    # messages.success(request, f'Removed {product.name} from your cart.')

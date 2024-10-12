@@ -1,7 +1,10 @@
 <script type="text/javascript">
 
+    console.log("POINT 1")
+
     // Disable buttons for invalid quantities
     function enableDisable(itemId) {
+        console.log("POINT 2")
         var currentValue = parseInt($(`#id_qty_${itemId}`).val());
         var minusDisabled = currentValue <= 1;
         var plusDisabled = currentValue >= 99;
