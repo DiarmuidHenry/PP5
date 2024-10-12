@@ -10,30 +10,30 @@ def cart_contents(request):
 
     cart_items = []
 
-    total = 0
+    subtotal = 0
 
     product_count = 0
 
     for item_id, quantity in cart.items():
         product = get_object_or_404(Product, pk=item_id)
-        total += product.price * quantity
+        subtotal += product.price * quantity
         cart_items.append({
             'product': product,
             'quantity': quantity,
             'item_id': item_id
         })
 
-    if total < settings.FREE_DELIVERY_THRESHOLD:
+    if subtotal < settings.FREE_DELIVERY_THRESHOLD:
         # Case 1: Apply delivery charge, calculate both differences
         delivery_charge = 4.99
-        free_delivery_difference = settings.FREE_DELIVERY_THRESHOLD - total
-        free_tote_bag_difference = settings.FREE_TOTE_BAG_THRESHOLD - total
+        free_delivery_difference = settings.FREE_DELIVERY_THRESHOLD - subtotal
+        free_tote_bag_difference = settings.FREE_TOTE_BAG_THRESHOLD - subtotal
 
-    elif settings.FREE_DELIVERY_THRESHOLD <= total < settings.FREE_TOTE_BAG_THRESHOLD:
+    elif settings.FREE_DELIVERY_THRESHOLD <= subtotal < settings.FREE_TOTE_BAG_THRESHOLD:
         # Case 2: Free delivery but calculate tote bag difference
         delivery_charge = 0
         free_delivery_difference = 0
-        free_tote_bag_difference = settings.FREE_TOTE_BAG_THRESHOLD - total
+        free_tote_bag_difference = settings.FREE_TOTE_BAG_THRESHOLD - subtotal
 
     else:
         # Case 3: Free delivery and tote bag achieved
@@ -42,18 +42,18 @@ def cart_contents(request):
         free_tote_bag_difference = 0
 
 
-    grand_total = delivery_charge + total
+    total = delivery_charge + subtotal
     
     context = {
         'cart_items': cart_items,
-        'total': total,
+        'subtotal': subtotal,
         'product_count': product_count,
         'delivery_charge': delivery_charge,
         'free_delivery_difference': free_delivery_difference,
         'free_tote_bag_difference': free_tote_bag_difference,
         'free_tote_bag_threshold' : settings.FREE_TOTE_BAG_THRESHOLD,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
-        'grand_total': grand_total,
+        'total': total,
     }
 
     return context
