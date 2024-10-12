@@ -49,14 +49,11 @@
                     <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
-                            {% with product.options as opt %}
-                                {% if opt %}
-                                    {% for option_type, option_values in opt.items %}
                                         <div class="col-12">
-                                            <p><strong>{{ option_type|capfirst }}</strong></p>
+                                            <p><strong>Options:</strong></p>
                                             <select class="form-control rounded w-50" name="product_option_{{ option_type }}" id="product_option_{{ option_type }}">
-                                                {% for value in option_values %}
-                                                    <option value="{{ value }}">{{ value|capfirst }}</option>
+                                                {% for option in product.get_option_list %}
+                                                    <option value="{{ option }}">{{ option|capfirst }}</option>
                                                 {% endfor %}
                                             </select>
                                         </div>
