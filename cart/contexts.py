@@ -81,23 +81,41 @@ def cart_contents(request):
     for unique_key, item_data in cart.items():
         print(f"Unique Key: {unique_key}, Item Data: {item_data}") 
 
+    print("cart:")
+    print(cart)
+
 
 
     for unique_key, item_data in cart.items():
-        product = get_object_or_404(Product, pk=item_data['product_id'])  # Retrieve product by ID
-        quantity = item_data['quantity']
-        item_id = item_data['product_id']
-        selected_option = item_data.get('option')  # Get the selected option if it exists
-        item_total = product.price * quantity
-        subtotal += item_total
-        product_count += quantity
-        cart_items.append({
-            'product': product,
-            'item_id': item_id,
-            'quantity': quantity,
-            'option': selected_option,
-            'item_total': item_total,
-        })
+
+        if isinstance(item_data, int):
+            print("Item data is integer")
+            product = get_object_or_404(Product, pk=unique_key)
+            quantity = item_data
+            item_total = product.price * quantity
+            subtotal += item_total
+            product_count += quantity
+            cart_items.append({
+                'product': product,
+                'item_id': unique_key,
+                'quantity': quantity,
+                'item_total': item_total,
+            })
+        else:
+            product = get_object_or_404(Product, pk=item_data['product_id'])  # Retrieve product by ID
+            quantity = item_data['quantity']
+            item_id = item_data['product_id']
+            selected_option = item_data.get('option')  # Get the selected option if it exists
+            item_total = product.price * quantity
+            subtotal += item_total
+            product_count += quantity
+            cart_items.append({
+                'product': product,
+                'item_id': item_id,
+                'quantity': quantity,
+                'option': selected_option,
+                'item_total': item_total,
+            })
     
     if subtotal < settings.FREE_DELIVERY_THRESHOLD:
         # Case 1: Apply delivery charge, calculate both differences

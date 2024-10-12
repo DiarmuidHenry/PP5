@@ -56,7 +56,7 @@
                             <p class="my-0">€{{ item.product.price }}</p>
                         </td>
                         <td class="py-2 w-30">
-                            <form class="form update-form" method="POST" action="">
+                            <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id%}">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <div class="input-group">
@@ -76,17 +76,15 @@
                                             </button>
                                         </div>
                                         {% if item.product.options %}
-                                            <input type="hidden" name="product_options" value="{{ item.options }}">
+                                            <input type="hidden" name="product_option" value="{{ item.options }}">
                                         {% endif%}
                                     </div>
                                     <div class="d-flex flex-column text-center mt-2">
-                                        <a class="remove-item text-danger d-block mb-2" id="remove_{{ item.item_id }}"
+                                        <a class="remove-item text-danger d-block mb-1" id="remove_{{ item.item_id }}"
                                             data-option="{{ item.option }}">
-                                            <p>Item ID: {{ item.item_id }}</p>
                                             <small>Remove</small>
                                         </a>
-                                        <a
-                                            class="update-link text-info text-black  d-block"><small>Recalculate</small></a>
+                                        <a class="update-link text-info text-black d-block"><small>Recalculate</small></a>
                                     </div>
                         </td>
                         <td class="py-2">
@@ -156,12 +154,12 @@
 {% include "products/includes/quantity_script.html" %}
 
 <script type="text/javascript">
-    // Recalculate subtotal
-    $('.update-link').click(function (e) {
-        console.log("POINT 3")
+    // Recalculate subtotal when clicking the update link
+$('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');
         form.submit();
     })
+
 
     // Remove item from cart and reload page
     $('.remove-item').click(function (e) {
