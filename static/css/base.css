@@ -74,6 +74,11 @@ body {
     width: fit-content;
 }
 
+.update-link,
+.remove-link {
+    cursor: pointer;
+}
+
 .shop-now-button {
     background: var(--color-2);
     color: var(--color-4);
@@ -107,6 +112,29 @@ body {
 	position: fixed;
 	z-index: -1;
 }
+
+/* Custom width classes */
+
+.w-10 {
+    width: 10%
+}
+
+.w-15 {
+    width: 15%
+}
+
+.w-20 {
+    width: 20%
+}
+
+.w-30 {
+    width: 30%
+}
+
+.w-40 {
+    width: 40%
+}
+
 
 
 /* Media Queries */
@@ -142,6 +170,24 @@ body {
 
     body {
         height: calc(100vh - 116px);
+    }
+}
+
+
+@media (max-width: 500px) {
+    .qty-controls {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .qty_input {
+        margin-bottom: 10px;
+    }
+
+    .d-flex {
+        flex-direction: column;
     }
 }
 
