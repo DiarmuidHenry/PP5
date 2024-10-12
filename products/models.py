@@ -34,7 +34,10 @@ class Product(models.Model):
     category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
     co2_footprint = models.FloatField()
     stock = models.IntegerField()
-    options = models.JSONField(null=True, blank=True)
+    options = models.TextField()  # Comma separated string
+
+    def get_options_list(self):
+        return self.options.split(',') if self.options else []
 
     # Create rating from mean of relevant entries in Rating
     @property
