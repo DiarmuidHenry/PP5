@@ -2,7 +2,8 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
+from .models import Product, Category, Rating
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -67,3 +68,24 @@ def product_detail(request, product_id):
     print(context)
 
     return render(request, 'products/product_detail.html', context)
+
+@login_required
+def rate_product(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+
+    if request.method == 'POST':
+        rating_value = request.POST.get('rating')
+        
+        # Check if the user has already rated the product
+        existing_rating = Rating.objects.filter(user=request.user, product=product).first()
+
+        if existing_rating:
+            # Update existing rating
+            existing_rating.rating = rating_value
+            existing_rating.save()
+        else:
+            # Create a new rating
+            Rating.objects.create(user=request.user, product=product, rating=rating_value)
+
+    # Redirect back to the product details page
+    return redirect('product_detail', product_id=product.id)

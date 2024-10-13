@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
-from django.db.models import Avg 
+from django.db.models import Avg
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Extend the user profile with additional fields
 class UserProfile(models.Model):
@@ -51,8 +52,8 @@ class Product(models.Model):
 # Allow users to rate products
 class Rating(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    product = models.ForeignKey('Product', on_delete=models.CASCADE)
-    rating = models.IntegerField()
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
 
     def __str__(self):
         return f'{self.product.name}: {self.rating} by {self.user.email}'

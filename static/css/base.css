@@ -146,7 +146,32 @@ body {
     width: 40%
 }
 
+/* Rating radio buttons */
 
+.rating {
+    direction: rtl; /* Reverse the order of the stars */
+    display: inline-block;
+  }
+  
+  .rating input[type="radio"] {
+    display: none; /* Hide the radio buttons */
+  }
+  
+  .rating label {
+    font-size: 30px; /* Adjust the size of stars */
+    color: gray; /* Default color for unselected stars */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+  }
+  
+  .rating input[type="radio"]:checked ~ label {
+    color: gold; /* Fill color for selected stars */
+  }
+  
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: gold; /* Fill color on hover */
+  }
+  
 
 /* Media Queries */
 
