@@ -36,7 +36,9 @@
                         <p class="mb-1 mt-0 small text-black">Subtotal</p>
                     </div>
                 </div>
+                             
                 {% for item in cart_items %}
+                {{ item }}
                     <div class="row">
                         <div class="col-2 mb-1">
                             <a href="{% url 'product_detail' item.product.id %}">
