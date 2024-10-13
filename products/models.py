@@ -3,15 +3,6 @@ from django.conf import settings
 from django.db.models import Avg
 from django.core.validators import MinValueValidator, MaxValueValidator
 
-# Extend the user profile with additional fields
-class UserProfile(models.Model):
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, primary_key=True)
-    address = models.CharField(max_length=255)
-    phone_number = models.CharField(max_length=15)
-
-    def __str__(self):
-        return f'{self.user.email}'
-
 # Compartmentalise items into different categories and subcategories
 class Category(models.Model):
 
