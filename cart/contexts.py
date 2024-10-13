@@ -80,12 +80,12 @@ def cart_contents(request):
     item_co2_footprint = Decimal("0.00")
     total_co2_footprint = Decimal("0.00")
 
-    for unique_key, item_data in cart.items():
-        print(f"Unique Key: {unique_key}, Item Data: {item_data}")
+    # for unique_key, item_data in cart.items():
+    #     print(f"Unique Key: {unique_key}, Item Data: {item_data}")
 
-    print("type: unique_key")
+    # print("type: unique_key")
 
-    print(cart)
+    # print(cart)
 
 
 

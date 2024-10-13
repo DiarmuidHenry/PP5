@@ -77,9 +77,11 @@ class Order(models.Model):
         super().save(*args, **kwargs)
 
     def update_total(self):
+        print("UPDATE TOTAL")
         # Calculate total cost using product prices from the Product model
         order_total = 0
         total_co2 = 0
+        print(type(item))
         for item in self.order_items:
             product = Product.objects.get(id=item['product_id'])
             item_total = item['quantity'] * product.price
