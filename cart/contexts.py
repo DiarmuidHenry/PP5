@@ -120,7 +120,7 @@ def cart_contents(request):
     
     if subtotal < settings.FREE_DELIVERY_THRESHOLD:
         # Case 1: Apply delivery charge, calculate both differences
-        delivery_charge = 4.99
+        delivery_charge = settings.DELIVERY_CHARGE
         free_delivery_difference = settings.FREE_DELIVERY_THRESHOLD - subtotal
         free_tote_bag_difference = settings.FREE_TOTE_BAG_THRESHOLD - subtotal
 
