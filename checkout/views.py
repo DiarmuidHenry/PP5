@@ -25,6 +25,7 @@ from .models import Order
 from products.models import Product  # Import the Product model
 
 def checkout(request):
+
     cart = request.session.get('cart', {})
     if not cart:
         messages.error(request, "There's nothing in your cart at the moment.")
@@ -46,16 +47,30 @@ def checkout(request):
         order_form = OrderForm()
 
     product_count = sum(item['quantity'] for item in cart.values())
+
+    # Fetch product details for each item in the cart
+    products = {}
+    for item in cart.values():
+        product_id = item['product_id']
+        try:
+            product = Product.objects.get(id=product_id)
+            products[product_id] = product
+        except Product.DoesNotExist:
+            products[product_id] = None
     
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'cart': cart,
-        'product_count': product_count,
-        'total_order_cost': order.total_order_cost,
-        'delivery_charge': order.delivery_charge,
-        'total_co2_impact': order.total_co2_footprint,
+        # 'cart': cart,
+        # 'product_count': product_count,
+        # 'products': products
+        # 'total_order_cost': order.total_order_cost,
+        # 'delivery_charge': order.delivery_charge,
+        # 'total_co2_impact': order.total_co2_footprint,
     }
+
+    print("Context data:")
+    print(context)
 
     return render(request, template, context)
 
@@ -65,3 +80,19 @@ def order_confirmation(request, order_number):
         'order': order,
     }
     return render(request, 'checkout/order_confirmation.html', context)
+
+
+# def checkout(request):
+#     cart = request.session.get('cart', {})
+#     if not cart:
+#         messages.error(request, "There's nothing in your bag at the moment")
+#         return redirect(reverse('products'))
+
+#     order_form = OrderForm()
+#     context = {
+#         'order_form': order_form,
+#     }
+
+#     print("got to here")
+
+#     return render(request, 'checkout/checkout.html', context)

@@ -49,6 +49,10 @@
                             {% if item.option %}
                             {{ item.option|title }}
                             {% endif %}
+                            <p class="my-1 text-muted">
+                            {% if item.product.co2_footprint %}
+                            CO2 Footprint: {{ item.product.co2_footprint}} kg
+                            {% endif %}
                             </p>
                             <p class="my-1 text-muted">{{ item.product.description }}</p>
                         </td>

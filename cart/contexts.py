@@ -77,6 +77,8 @@ def cart_contents(request):
     cart_items = []
     subtotal = 0
     product_count = 0
+    item_co2_footprint = Decimal("0.00")
+    total_co2_footprint = Decimal("0.00")
 
     for unique_key, item_data in cart.items():
         print(f"Unique Key: {unique_key}, Item Data: {item_data}")
@@ -96,11 +98,14 @@ def cart_contents(request):
             item_total = product.price * quantity
             subtotal += item_total
             product_count += quantity
+            item_co2_footprint = Decimal(product.co2_footprint * quantity).quantize(Decimal('0.01'))
+            total_co2_footprint += item_co2_footprint  # Sum 
             cart_items.append({
                 'product': product,
                 'item_id': unique_key,
                 'quantity': quantity,
                 'item_total': item_total,
+                'item_co2_footprint': item_co2_footprint,
             })
         else:
             product = get_object_or_404(Product, pk=item_data['product_id'])  # Retrieve product by ID
@@ -110,12 +115,15 @@ def cart_contents(request):
             item_total = product.price * quantity
             subtotal += item_total
             product_count += quantity
+            item_co2_footprint = Decimal(product.co2_footprint * quantity).quantize(Decimal('0.01'))
+            total_co2_footprint += item_co2_footprint  # Sum 
             cart_items.append({
                 'product': product,
                 'item_id': item_id,
                 'quantity': quantity,
                 'option': selected_option,
                 'item_total': item_total,
+                'item_co2_footprint': item_co2_footprint,
             })
     
     if subtotal < settings.FREE_DELIVERY_THRESHOLD:
@@ -147,6 +155,7 @@ def cart_contents(request):
         'free_tote_bag_difference': free_tote_bag_difference,
         'free_tote_bag_threshold' : settings.FREE_TOTE_BAG_THRESHOLD,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
+        'total_co2_footprint': total_co2_footprint,
         'total': total,
     }
 
