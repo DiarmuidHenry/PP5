@@ -45,7 +45,7 @@
 
 import uuid
 from django.db import models
-from django.contrib.postgres.fields import JSONField  # Only if using PostgreSQL
+from django.db.models import JSONField
 from products.models import Product
 
 class Order(models.Model):
@@ -62,7 +62,7 @@ class Order(models.Model):
     delivery_charge = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     order_datetime = models.DateTimeField(auto_now_add=True)
     total_order_cost = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False)
-    order_items = JSONField(null=False, blank=False)  # Store product details (without price)
+    order_items = models.JSONField(null=True, blank=True)  # Store product details (without price)
 
     def _generate_order_number(self):
         # Generate random unique order number for each order
