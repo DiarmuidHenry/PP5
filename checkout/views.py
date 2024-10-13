@@ -61,12 +61,9 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        # 'cart': cart,
-        # 'product_count': product_count,
-        # 'products': products
-        # 'total_order_cost': order.total_order_cost,
-        # 'delivery_charge': order.delivery_charge,
-        # 'total_co2_impact': order.total_co2_footprint,
+        'stripe_public_key': "pk_test_51Q9RiHP7ZhPo0gd4Bj6nUp2XOi8tcoSaFJatvPr0ZLBCbhOMLqrBRwCpIxMOPU9ykFwaXtyhU8TSfjQzvAZqv8cl00AADyIWEE",
+        'client_secret': 'TESST_CLIENT_SECRET'
+
     }
 
     print("Context data:")
