@@ -1,0 +1,100 @@
+<!-- order_confirmation.html -->
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="mb-4" style="font-weight: bold;">Order Confirmation</h2>  <!-- Bold title -->
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-6 mb-5">
+                <p class="text-muted">Customer Details</p>
+                <div>
+                    <p><strong>Name:</strong> {{ order.name }}</p>
+                    <p><strong>Email:</strong> {{ order.email }}</p>
+                    <p><strong>Phone Number:</strong> {{ order.phone_number }}</p>
+                    <p><strong>Address:</strong> {{ order.address_1 }}{% if order.address_2 %}, {{ order.address_2 }}{% endif %}</p>
+                    <p><strong>City:</strong> {{ order.city }}</p>
+                    <p><strong>County:</strong> {{ order.county }}</p>
+                    <p><strong>Post Code:</strong> {{ order.post_code }}</p>
+                    <p><strong>Country:</strong> {{ order.country }}</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6 order-lg-last mb-5">
+                <p class="text-muted">Order Summary</p>
+                <div class="row">
+                    <div class="col-7">
+                        <p class="mb-1 mt-0 small text-muted">Item</p>
+                    </div>
+                    <div class="col-3 text-right">
+                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
+                    </div>
+                </div>
+
+                {% for item in order.order_items %}
+                    <div class="row">
+                        <div class="col-2 mb-1">
+                            <a href="{% url 'product_detail' item.product_id %}">
+                                {% if item.image %}
+                                    <img class="w-100" src="{{ item.image.url }}" alt="{{ item.product_name }}">
+                                {% else %}
+                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product_name }}">
+                                {% endif %}
+                            </a>
+                        </div>
+                        <div class="col-7">
+                            <p class="my-0"><strong>{{ item.product_name }}</strong></p>
+                            <p class="my-0 small">Option: {% if item.option %}{{ item.option|title }}{% else %}N/A{% endif %}</p>
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                            <p class="my-0 small text-muted">CO2 Footprint: {{ item.co2_footprint }} kg</p>
+                        </div>                        
+                        <div class="col-3 text-right">
+                            <p class="my-0 small text-muted">€{{ item.price }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                <hr class="my-0">
+                <div class="row text-black text-right">
+                    <div class="col-7">
+                        <p class="my-0">Order Total:</p>
+                        <p class="my-0">Delivery:</p>
+                        <p class="my-0">Grand Total:</p>
+                        <p class="my-0">Total CO2 Footprint:</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="my-0">€{{ order.total_order_cost | floatformat:2 }}</p>
+                        <p class="my-0">€{{ order.delivery_charge | floatformat:2 }}</p>
+                        <p class="my-0"><strong>€{{ order.total_order_cost | floatformat:2 }}</strong></p>
+                        <p class="my-0"><strong>{{ order.total_co2_impact | floatformat:2 }} kg</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Return to Home Button -->
+        <div class="row">
+            <div class="col text-center">
+                <a href="{% url 'home' %}" class="btn btn-outline-black rounded-0">
+                    <span class="font-weight-bold">Return to Home</span>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

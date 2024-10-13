@@ -61,6 +61,8 @@ class Order(models.Model):
     country = models.CharField(max_length=60, null=False, blank=False)
     delivery_charge = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     order_datetime = models.DateTimeField(auto_now_add=True)
+    total_co2_footprint = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False, default=0)
+    total_product_cost = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False, default=0) 
     total_order_cost = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False)
     order_items = models.JSONField(null=True, blank=True)  # Store product details (without price)
 
@@ -77,10 +79,12 @@ class Order(models.Model):
     def update_total(self):
         # Calculate total cost using product prices from the Product model
         order_total = 0
+        total_co2 = 0
         for item in self.order_items:
             product = Product.objects.get(id=item['product_id'])
             item_total = item['quantity'] * product.price
             order_total += item_total
+            total_co2 += item['quantity'] * product.co2_footprint  # Calculate CO2 impact
 
         # Update delivery charge if needed
         if order_total < settings.FREE_DELIVERY_THRESHOLD:
@@ -90,6 +94,7 @@ class Order(models.Model):
 
         # Final order total
         self.total_order_cost = order_total + self.delivery_charge
+        self.total_co2_impact = total_co2  # Update total CO2 impact
         self.save()
 
     def __str__(self):
