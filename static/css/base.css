@@ -151,27 +151,39 @@ body {
 .rating {
     direction: rtl; /* Reverse the order of the stars */
     display: inline-block;
-  }
-  
-  .rating input[type="radio"] {
-    display: none; /* Hide the radio buttons */
-  }
-  
-  .rating label {
-    font-size: 30px; /* Adjust the size of stars */
-    color: gray; /* Default color for unselected stars */
-    cursor: pointer; /* Cursor changes to pointer on hover */
-  }
-  
-  .rating input[type="radio"]:checked ~ label {
-    color: gold; /* Fill color for selected stars */
-  }
-  
-  .rating label:hover,
-  .rating label:hover ~ label {
-    color: gold; /* Fill color on hover */
-  }
-  
+}
+
+.rating input[type="radio"] {
+display: none; /* Hide the radio buttons */
+}
+
+.rating label {
+font-size: 30px; /* Adjust the size of stars */
+color: gray; /* Default color for unselected stars */
+cursor: pointer; /* Cursor changes to pointer on hover */
+}
+
+.rating input[type="radio"]:checked ~ label {
+color: gold; /* Fill color for selected stars */
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+color: gold; /* Fill color on hover */
+}
+
+/* Hide the number input arrows in Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide the number input arrows in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 
 /* Media Queries */
 

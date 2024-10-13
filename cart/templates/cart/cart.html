@@ -19,7 +19,6 @@
             <hr>
         </div>
     </div>
-
     <div class="row">
         <div class="col">
             {% if cart_items %}
@@ -50,52 +49,29 @@
                             {{ item.option|title }}
                             {% endif %}
                             <p class="my-1 text-muted">
-                            {% if item.product.co2_footprint %}
-                            CO2 Footprint: {{ item.product.co2_footprint}} kg
-                            {% endif %}
+                                {% if item.product.co2_footprint %}
+                                CO2 Footprint: {{ item.product.co2_footprint }} kg
+                                {% endif %}
                             </p>
                             <p class="my-1 text-muted">{{ item.product.description }}</p>
                         </td>
                         <td class="py-2">
                             <p class="my-0">€{{ item.product.price }}</p>
                         </td>
-                        <td class="py-2 w-30">
-                            <form id="form_{{ item.item_id }}" class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend qty-controls">
-                                            <button class="decrement-qty btn btn-black rounded-0 btn-sm"
-                                                data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                                <span><i class="fa-solid fa-minus"></i></span>
-                                            </button>
-                                        </div>
-                                        <input class="form-control form-control-sm qty_input" type="number"
-                                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                            data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                                        <div class="input-group-append qty-controls">
-                                            <button class="increment-qty btn btn-black rounded-0 btn-sm"
-                                                data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                <span><i class="fa-solid fa-plus"></i></span>
-                                            </button>
-                                        </div>
-                                        {% if item.product.options %}
-                                            <input type="hidden" name="product_option" value="{{ item.product.options }}">
-                                        {% endif%}
-                                    </div>
-                                    <div class="d-flex flex-column text-center mt-2">
-                                        <a class="remove-item text-danger d-block mb-1" id="remove_{{ item.item_id }}"
-                                            data-option="{{ item.option }}">
-                                            <small>Remove</small>
-                                        </a>
-                                        <a id="update_{{ item.item_id }}" class="text-info text-black d-block update-link"><small>Recalculate</small></a>
-                                    </div>
+                        <td class="py-2">
+                            <p class="my-0">{{ item.quantity }}</p>
+                            <a class="remove-item text-danger d-block mb-1" id="remove_{{ item.item_id }}"
+                                    data-option="{{ item.option }}">
+                                    <small>Remove</small>
+                                </a>
                         </td>
                         <td class="py-2">
                             <p class="my-0">€{{ item.item_total }}</p>
+                                
                         </td>
                     </tr>
                     {% endfor %}
+
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
                             <h6><strong>Subtotal: €{{ subtotal|floatformat:2 }}</strong></h6>
@@ -159,30 +135,30 @@
 
 <script type="text/javascript">
     // Recalculate subtotal when clicking the update link
-    $('.update-link').click(function(e) {
-    e.preventDefault(); // Prevent default action if necessary
-    console.log("registering click");
+    $('.update-link').click(function (e) {
+        e.preventDefault(); // Prevent default action if necessary
+        console.log("registering click");
 
-    // Get the ID of the clicked anchor
-    var anchorId = $(this).attr('id'); // Get the ID of the clicked update link
-    console.log("Anchor ID:", anchorId);
+        // Get the ID of the clicked anchor
+        var anchorId = $(this).attr('id'); // Get the ID of the clicked update link
+        console.log("Anchor ID:", anchorId);
 
-    // Extract the item ID from the anchor ID
-    var itemId = anchorId.split('_')[1]; // This will give you the item ID
-    console.log("Extracted Item ID:", itemId);
-    console.log("looking for form: ")
-    var form = $('#form_' + itemId); // Select the form using the unique ID
+        // Extract the item ID from the anchor ID
+        var itemId = anchorId.split('_')[1]; // This will give you the item ID
+        console.log("Extracted Item ID:", itemId);
+        console.log("looking for form: ")
+        var form = $('#form_' + itemId); // Select the form using the unique ID
 
-    console.log("Form found:", form); // Check if the form is found
+        console.log("Form found:", form); // Check if the form is found
 
-    var quantity = form.find('input[name="quantity"]').val();
-    console.log("Quantity to submit:", quantity); // Log the quantity value
+        var quantity = form.find('input[name="quantity"]').val();
+        console.log("Quantity to submit:", quantity); // Log the quantity value
 
-    if (form.length > 0) {
-        form.submit(); // Submit the form if found
-    } else {
-        console.log("No form found associated with this update link.");
-    }
+        if (form.length > 0) {
+            form.submit(); // Submit the form if found
+        } else {
+            console.log("No form found associated with this update link.");
+        }
     });
 
 
