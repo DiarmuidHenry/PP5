@@ -91,3 +91,15 @@ def rate_product(request, product_id):
 
     # Redirect back to the product details page
     return redirect('product_detail', product_id=product.id)
+
+@login_required
+def product_detail(request, product_id):
+    # Show details of a single product
+    product = get_object_or_404(Product, pk=product_id)
+    user_rating = Rating.objects.filter(product=product, user=request.user).first() if request.user.is_authenticated else None
+
+    context = {
+        'product': product,
+        'user_rating': user_rating,
+    }
+    return render(request, 'products/product_detail.html', context)
