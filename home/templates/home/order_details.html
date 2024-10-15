@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% load static ‰}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container mb-3">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="mb-3 mt-1">Order Details</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="text-black">
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col"></th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+
+                    {% for item in product_details %}
+                    <tr>
+                        <td class="p-2 w-25">
+                            {% if item.image_url %}
+                                <img class="img-fluid rounded" src="{{ item.image_url }}">
+                            {% else %}
+                                <img class="img-fluid rounded" src="/media/no_image.jpg">
+                            {% endif %}
+                        </td>
+                        <td class="py-2 w-50">
+                            <p class="my-0 font-weight-bold">{{ item.name }}</p>
+                            {% if item.option %}
+                            {{ item.option|title }}
+                            {% endif %}
+                            <p class="my-1 text-muted">
+                                {% if item.co2_footprint %}
+                                CO2 Footprint: {{ item.co2_footprint }} kg
+                                {% endif %}
+                            </p>
+                            <p class="my-1 text-muted">{{ item.description }}</p>
+                        </td>
+                        <td class="py-2">
+                            <p class="my-0">€{{ item.price }}</p>
+                        </td>
+                        <td class="py-2">
+                            <p class="my-0">{{ item.quantity }}</p>
+                        </td>
+                        <td class="py-2">
+                            <p class="my-0">€{{ item.item_total }}</p>
+                                
+                        </td>
+                    </tr>
+                    {% endfor %}
+
+                    <tr>
+                        <td colspan="5" class="pt-5 text-right">
+                            <h6><strong>Subtotal: €{{ order.total_product_cost|floatformat:2 }}</strong></h6>
+                            {% if order.total_product_cost > free_tote_bag_threshold %}
+                            <p class="mb-1 text-danger">
+                                Free tote bag included!
+                            </p>
+                            {% endif %}
+                            {% if order.total_product_cost > free_delivery_threshold %}
+                            <p class="mb-1 text-danger">
+                                Free delivery!
+                            </p>
+                            {% else %}
+                            <h6>Delivery: €{{ order.delivery_charge|floatformat:2 }}</h6>
+                    
+                            {% endif %}
+                            <h4 class="mt-4"><strong>Total: €{{ order.total_order_cost|floatformat:2 }}</strong></h4>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-right">
+                            <a href="{% url 'home' %}" class="btn btn-black rounded-0 btn-lg">
+                                <span class="">Return to Home</span>
+                            </a>
+                            <a href="{% url 'my_orders' %}" class="btn btn-black rounded-0 btn-lg">
+                                <span class="">Return to My Orders</span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

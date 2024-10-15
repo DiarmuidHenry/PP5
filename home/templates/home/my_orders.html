@@ -28,10 +28,10 @@
                 {% for order in orders %}
                     <tr>
                         <td>{{ order.order_datetime|date:"Y-m-d H:i" }}</td>
-                        <td><a class="order-details" href="">{{ order.order_number }}</a></td>
+                        <td><a class="order-details" href="{% url 'order_details' order.order_number %}">{{ order.order_number }}</a></td>
                         <td>€{{ order.total_order_cost }}</td>
                         <td>{{ order.total_co2_footprint }} kg</td>
-                        <td><a class="order-details" href="">Details</a></td>
+                        <td><a class="order-details" href="{% url 'order_details' order.order_number %}">Details</a></td>
                     </tr>
                 {% endfor %}
             </tbody>
