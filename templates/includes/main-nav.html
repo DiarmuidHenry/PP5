@@ -5,11 +5,11 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0 background-color-5" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item text-black">By Price</a>                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item text-black ">By Rating</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item text-black">By Price</a>
+                <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item text-black">By Name</a>
                 <a href="{% url 'products' %}" class="dropdown-item text-black">All Products</a>
             </div>
         </li>
-        
 
         <li class="nav-item dropdown">
             <a class="font-weight-bold text-black nav-link mr-5" href="#" id="first-category-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -46,5 +46,19 @@
                 <a href="{% url 'products' %}?category=men,women" class="dropdown-item text-black">All Personal Hygiene</a>
             </div>
         </li>
+    </ul>
+    <ul class="navbar-nav ms-auto">
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+            <a class="nav-link text-black" href="{% url 'account_logout' %}">Sign Out</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+            <a class="nav-link text-black" href="{% url 'account_login' %}">Sign In</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-black" href="{% url 'account_signup' %}">Sign Up</a>
+        </li>
+        {% endif %}
     </ul>
 </div>
