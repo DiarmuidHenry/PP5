@@ -5,6 +5,7 @@ from .forms import OrderForm
 from .models import Order
 from products.models import Product
 from cart.contexts import cart_contents
+from django.contrib.auth.decorators import login_required
 import stripe
 
 def checkout(request):
@@ -185,3 +186,13 @@ def order_confirmation(request, order_number):
         'order': order,
     }
     return render(request, 'checkout/order_confirmation.html', context) 
+
+@login_required
+def my_orders(request):
+    # Retrieve orders for the logged-in user
+    orders = Order.objects.filter(email=request.user.email)
+
+    context = {
+        'orders': orders,
+    }
+    return render(request, 'orders/my_orders.html', context)

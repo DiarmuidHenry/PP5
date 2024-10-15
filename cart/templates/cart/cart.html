@@ -134,75 +134,28 @@
 {% include "products/includes/quantity_script.html" %}
 
 <script type="text/javascript">
-    // Recalculate subtotal when clicking the update link
-    $('.update-link').click(function (e) {
-        e.preventDefault(); // Prevent default action if necessary
-        console.log("registering click");
-
-        // Get the ID of the clicked anchor
-        var anchorId = $(this).attr('id'); // Get the ID of the clicked update link
-        console.log("Anchor ID:", anchorId);
-
-        // Extract the item ID from the anchor ID
-        var itemId = anchorId.split('_')[1]; // This will give you the item ID
-        console.log("Extracted Item ID:", itemId);
-        console.log("looking for form: ")
-        var form = $('#form_' + itemId); // Select the form using the unique ID
-
-        console.log("Form found:", form); // Check if the form is found
-
-        var quantity = form.find('input[name="quantity"]').val();
-        console.log("Quantity to submit:", quantity); // Log the quantity value
-
-        if (form.length > 0) {
-            form.submit(); // Submit the form if found
-        } else {
-            console.log("No form found associated with this update link.");
-        }
-    });
-
-
-
-
     // Remove item from cart and reload page
     $('.remove-item').click(function (e) {
-        console.log("POINT 4")
+        
         var csrfToken = "{{ csrf_token }}";
-        console.log()
-        console.log("csrfToken: ")
-        console.log(csrfToken)
-        console.log()
+
 
         var itemId = $(this).attr('id');
-        console.log("Retrieved ID: ", itemId); // Check what ID is retrieved
 
         // Extract the actual item ID by splitting
         itemId = itemId.split('remove_')[1]; // Now get the part after 'remove_'
-        console.log("itemId after split: ", itemId); // Log after splitting
 
         var option = $(this).data('option');
-        console.log()
-        console.log("option: ")
-        console.log(option)
-        console.log()
 
-        console.log("this")
-        console.log((this))
 
         var url = `/cart/remove/${itemId}/`;
-        console.log()
-        console.log("url: ")
-        console.log(url)
-        console.log()
+
 
         var data = {
             'csrfmiddlewaretoken': csrfToken,
             'option': option
         };
-        console.log()
-        console.log("data: ")
-        console.log(data)
-        console.log()
+
 
         $.post(url, data)
             .done(function () {
