@@ -36,9 +36,11 @@
                     {% for item in product_details %}
                     <tr>
                         <td class="p-2 w-25">
-                            {% if item.image_url %}
+                            {% if item.image %}
+                            HAS IMAGE
                                 <img class="img-fluid rounded" src="{{ item.image_url }}">
                             {% else %}
+                            HAS NO IMAGE
                                 <img class="img-fluid rounded" src="/media/no_image.jpg">
                             {% endif %}
                         </td>
