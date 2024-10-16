@@ -16,7 +16,7 @@ def index(request):
 def my_orders(request):
     if request.user.is_authenticated:
         # Fetch orders associated with the user's email
-        orders = Order.objects.filter(email=request.user.email) 
+        orders = Order.objects.filter(user=request.user) 
     else:
         orders = []  # No orders if user is not authenticated
 
