@@ -2,10 +2,10 @@ from django.contrib import admin
 from .models import Order
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('order_number', 'name', 'email', 'total_order_cost', 'order_datetime')
+    list_display = ('order_number', 'name', 'email', 'user', 'total_order_cost', 'order_datetime')
     list_filter = ('order_datetime',)
     search_fields = ('order_number', 'name', 'email')
-    readonly_fields = ('order_number', 'delivery_charge', 'total_order_cost', 'order_datetime')
+    readonly_fields = ('order_number', 'user', 'delivery_charge', 'total_order_cost', 'order_datetime')
 
     def get_order_items(self, obj):
         # Display order items in a readable format
@@ -15,7 +15,7 @@ class OrderAdmin(admin.ModelAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ('order_number', 'name', 'email', 'phone_number', 'address_1', 'address_2', 'city', 'county', 'post_code', 'country', 'order_datetime')
+            'fields': ('order_number', 'name', 'email', 'user', 'phone_number', 'address_1', 'address_2', 'city', 'county', 'post_code', 'country', 'order_datetime')
         }),
         ('Order Details', {
             'fields': ('order_items', 'delivery_charge', 'total_order_cost'),

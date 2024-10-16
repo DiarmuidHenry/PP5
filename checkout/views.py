@@ -41,6 +41,11 @@ def checkout(request):
                 order.total_co2_footprint = cart_info['total_co2_footprint']
                 order_items = []
 
+                # Assign the logged-in user to the order, if authenticated
+                if request.user.is_authenticated:
+                    order.user = request.user
+                    print("ASSIGNED USER - BUG TEST")
+
                 print("Cart info:")
                 print(cart_info)
             
