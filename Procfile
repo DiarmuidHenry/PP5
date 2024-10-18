@@ -1,1 +1,1 @@
-web: gunicorn sustainable-living.wsgi:application
+web: gunicorn sustainable_living.wsgi:application
