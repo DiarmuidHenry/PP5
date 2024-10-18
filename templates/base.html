@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{% block meta_description %}Sustainable Living - Helping you to make the right decisions{% endblock %}">
     {% endblock %}
 
     {% block extra_meta %}
@@ -36,6 +37,9 @@
 
     {% block extra_js %}
     {% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon/favicon.ico' %}">
+
 
     <title>Sustainable Living {% block extra_title %}{% endblock %}</title>
   </head>
