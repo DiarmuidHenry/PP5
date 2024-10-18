@@ -74,5 +74,28 @@
             </div>
         </div>
     </div>
+
+    <!-- Newsletter Signup Section -->
+    <div class="row">
+        <div class="col-12 my-5 text-center">
+            <h2 class="text-color-5 my-3 font-weight-bold">Sign up for our Newsletter</h2>
+            <form method="post" action="{% url 'newsletter_signup' %}">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+            {% if message %}
+                <div class="alert alert-success" role="alert">
+                    {{ message }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
 </div>
 {% endblock %}

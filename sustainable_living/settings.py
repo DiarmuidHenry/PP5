@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-diarmuidhenry-pp5-02wc260itsh.ws.codeinstitute-ide.net',
@@ -187,8 +187,6 @@ MEDIA_URL = 'https://res.cloudinary.com/{}/'.format(os.environ.get("CLOUD_NAME")
 
 # Cloudinary settings
 CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
-
-print(CLOUDINARY_URL)
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 

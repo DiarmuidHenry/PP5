@@ -1,9 +1,24 @@
+
 {% extends "base.html" %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-<div class="container text-center" style="margin-top: 100px;">
-    <h1 class="display-4">500 - Server Error</h1>
-    <p>Sorry, there was a problem getting the information from our server.</p>
-    <a class="btn btn-black rounded-0 btn-lg" href="{% url 'home' %}">Return to Home</a>
+
+<div class="container mt-5 mb-3">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-4">500 - Server error</h1>
+            <p class="lead">Sorry, there was a problem getting the information from our server.</p>
+            <a class="btn btn-black rounded-0 btn-lg" href="{% url 'home' %}">Return to Home</a>
+
+        </div>
+    </div>
 </div>
 {% endblock %}
