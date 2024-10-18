@@ -54,7 +54,7 @@ html {
 }
 
 body {
-    background: url('/media/background_image.jpg') no-repeat center center fixed;
+    background: url('https://res.cloudinary.com/drrywrvwv/image/upload/v1729281180/background_image_1_ztqtpc.jpg') no-repeat center center fixed;
     /* background-color: var(--color-1); */
     background-size: cover;
     height: calc(100vh - 160px);

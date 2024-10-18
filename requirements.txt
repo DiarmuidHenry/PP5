@@ -1,7 +1,9 @@
 asgiref==3.8.1
+cloudinary==1.41.0
 dj-database-url==0.5.0
 Django==5.0.7
 django-allauth==64.0.0
+django-cloudinary-storage==0.3.0
 django-countries==7.2.1
 django-crispy-forms==1.14.0
 django-phonenumber-field==8.0.0
