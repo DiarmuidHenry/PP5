@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center text-black my-5">Product Management</h2>
+    <div class="text-center my-3">
+        <h3 class="text-black">Please enter details of new products here.</h3>
+    </div>
+    <div class="text-center text-black my-3 w-50"></div>
+        <h3 class="text-black">Note: in the 'Options' field, options must be written as a comma separated list, with no commas. For example: blue,green,grey
+        Any other forms may lead to errors in creating a new product in the database.
+    </h3>
+</div>
+    <form class="text-black fs-2 ml-3" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary mb-5">Add Product</button>
+    </form>
+    {% if message %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -15,7 +15,10 @@ class Category(models.Model):
     parent = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True, related_name='subcategories')
 
     def __str__(self):
-        return self.name
+        if self.parent:
+            return f"{self.parent.name} - {self.name}".title()  # "Parent - Product"
+        else:
+            return self.name  # Just "Category"
 
 # Details of the products in the shop
 class Product(models.Model):

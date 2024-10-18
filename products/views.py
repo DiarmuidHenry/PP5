@@ -3,9 +3,8 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category, Rating
+from .forms import ProductForm
 from django.contrib.auth.decorators import login_required
-
-# Create your views here.
 
 def all_products(request):
 
@@ -103,3 +102,19 @@ def product_detail(request, product_id):
         'user_rating': user_rating,
     }
     return render(request, 'products/product_detail.html', context)
+
+@login_required
+def product_management(request):
+    if request.user.is_superuser:
+        if request.method == 'POST':
+            form = ProductForm(request.POST, request.FILES)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Product added successfully!')
+                return redirect('product_management')
+        else:
+            form = ProductForm()
+        
+        return render(request, 'products/product_management.html', {'form': form})
+    else:
+        return redirect('home')
