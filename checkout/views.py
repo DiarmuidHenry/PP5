@@ -181,7 +181,7 @@ def order_confirmation(request, order_number):
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
     messages.success(request, f'Order confirmed! \
-        You will soon receive confirmation of Order {order_number} at {order.email}.')
+        Order Number: {order_number}')
 
     if 'cart' in request.session:
         del request.session['cart']
