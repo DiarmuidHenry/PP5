@@ -50,13 +50,10 @@ def order_details(request, order_number):
 
     context = {
         'order': order,
-        'product_details': product_details,  # Pass the new list of product details
+        'product_details': product_details,
         'free_tote_bag_threshold': settings.FREE_TOTE_BAG_THRESHOLD,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
     }
-
-    print("context:")
-    print(context)  # Debugging: print the context to verify
 
     return render(request, 'home/order_details.html', context)
 
@@ -70,4 +67,4 @@ def newsletter_signup(request):
     else:
         form = NewsletterSignupForm()
     
-    return render(request, 'home/index.html', {'form': form})  # Adjust template name
+    return render(request, 'home/index.html', {'form': form})

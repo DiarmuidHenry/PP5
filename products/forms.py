@@ -1,5 +1,3 @@
-# products/forms.py
-
 from django import forms
 from .models import Product
 
@@ -10,10 +8,11 @@ class ProductForm(forms.ModelForm):
 
     def clean_options(self):
         options = self.cleaned_data.get('options')
-        if options is not None:  # Check if options is provided
+        if options:  # Only proceed if options is not None or an empty string
             options_list = options.split(',')
             for option in options_list:
                 if not option.strip():  # Check for empty options
-                    raise ValidationError('Options cannot be empty.')
+                    raise ValidationError('Options cannot contain empty values.')
             return options  # Return the cleaned options
-        return options  # Return None if options is not provided
+        
+        return ''

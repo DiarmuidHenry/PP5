@@ -5,7 +5,6 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from cloudinary.models import CloudinaryField
 
 
-# Compartmentalise items into different categories and subcategories
 class Category(models.Model):
 
     class Meta:

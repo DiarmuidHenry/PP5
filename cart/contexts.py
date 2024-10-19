@@ -80,15 +80,6 @@ def cart_contents(request):
     item_co2_footprint = Decimal("0.00")
     total_co2_footprint = Decimal("0.00")
 
-    # for unique_key, item_data in cart.items():
-    #     print(f"Unique Key: {unique_key}, Item Data: {item_data}")
-
-    # print("type: unique_key")
-
-    # print(cart)
-
-
-
     for unique_key, item_data in cart.items():
 
         if isinstance(item_data, int):
@@ -108,10 +99,10 @@ def cart_contents(request):
                 'item_co2_footprint': item_co2_footprint,
             })
         else:
-            product = get_object_or_404(Product, pk=item_data['product_id'])  # Retrieve product by ID
+            product = get_object_or_404(Product, pk=item_data['product_id'])
             quantity = item_data['quantity']
             item_id = item_data['product_id']
-            selected_option = item_data.get('option')  # Get the selected option if it exists
+            selected_option = item_data.get('option')
             item_total = product.price * quantity
             subtotal += item_total
             product_count += quantity

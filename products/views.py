@@ -59,14 +59,10 @@ def all_products(request):
 
 def product_detail(request, product_id):
     # Show details of a single product
-
     product = get_object_or_404(Product, pk=product_id)
-
     context = {
         'product': product,
     }
-    print("context in details")
-    print(context)
 
     return render(request, 'products/product_detail.html', context)
 

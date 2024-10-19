@@ -4,561 +4,561 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/cart/</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?sort=name&amp;direction=asc</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=bathroom</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=fabrics</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=kitchen</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=bathroom,fabrics,kitchen,Cleaning%20Products</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=food</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=packaging</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=towels</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=utensils</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=food,packaging,towels,utensils,Kitchen%20Items</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=men</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=women</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=men,women,Personal%20Hygiene</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/30</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=Cleaning%20Products</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/22</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=Kitchen%20Items%20-%20Utensils,Kitchen%20Items%20-%20Packaging,Kitchen%20Items%20-%20Food,Kitchen%20Items%20-%20Towels</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=Kitchen%20Items,utensils,packaging,food,towels</loc>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/23</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/11</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=Cleaning%20Products%20-%20Kitchen,Cleaning%20Products%20-%20Bathroom,Cleaning%20Products%20-%20Fabrics</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=Cleaning%20Products,kitchen,bathroom,fabrics</loc>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/25</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/29</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/7</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/12</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/15</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/10</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/27</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/18</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/26</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/9</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/2</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=Personal%20Hygiene%20-%20Men,Personal%20Hygiene%20-%20Women</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <loc>https://sustainable-living-47990b315e83.herokuapp.com/products/?category=Personal%20Hygiene,men,women</loc>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/14</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/16</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/3</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/24</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/5</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/17</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/1</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/6</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/13</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/8</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/4</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/20</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/21</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=/products/19</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F30</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F22</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F23</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F11</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F25</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F29</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F7</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F12</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F15</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F10</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F27</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F18</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F26</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F9</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F2</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F14</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F16</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F3</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F24</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F5</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F17</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F1</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F6</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F13</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F8</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F4</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F20</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F21</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/signup/?next=%2Fproducts%2F19</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F30</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F22</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F23</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F11</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F25</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F29</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F7</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F12</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F15</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F10</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F27</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F18</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F26</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F9</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F2</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F14</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F16</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F3</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F24</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F5</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F17</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F1</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F6</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F13</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F8</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F4</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F20</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F21</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://sustainable-living-47990b315e83.herokuapp.com/accounts/login/?next=%2Fproducts%2F19</loc>
-  <lastmod>2024-10-18T22:52:47+00:00</lastmod>
+  <lastmod>2024-10-19T13:50:07+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 

@@ -33,7 +33,6 @@
                             <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
-
                     {% for item in cart_items %}
                     <tr>
                         <td class="p-2 w-25">
@@ -71,7 +70,6 @@
                         </td>
                     </tr>
                     {% endfor %}
-
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
                             <h6><strong>Subtotal: €{{ subtotal|floatformat:2 }}</strong></h6>
@@ -95,7 +93,6 @@
                             </p>
                             {% endif %}
                             <h4 class="mt-4"><strong>Total: €{{ total|floatformat:2 }}</strong></h4>
-
                         </td>
                     </tr>
                     <tr>
@@ -117,8 +114,8 @@
             <p class="lead mb-5">Your cart is empty.</p>
             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                 <span
-                    class="p-2 mt-2 badge badge-white text-black rounded-0 border-0 background-color-4 border-dark">Keep
-                    Shopping</span>
+                    class="p-2 mt-2 badge badge-white text-black rounded-0 border-0 background-color-4 border-dark">
+                    Keep Shopping</span>
             </a>
             {% endif %}
         </div>
@@ -136,27 +133,16 @@
 <script type="text/javascript">
     // Remove item from cart and reload page
     $('.remove-item').click(function (e) {
-        
         var csrfToken = "{{ csrf_token }}";
-
-
         var itemId = $(this).attr('id');
-
         // Extract the actual item ID by splitting
-        itemId = itemId.split('remove_')[1]; // Now get the part after 'remove_'
-
+        itemId = itemId.split('remove_')[1];
         var option = $(this).data('option');
-
-
         var url = `/cart/remove/${itemId}/`;
-
-
         var data = {
             'csrfmiddlewaretoken': csrfToken,
             'option': option
         };
-
-
         $.post(url, data)
             .done(function () {
                 location.reload();
