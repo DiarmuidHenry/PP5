@@ -71,14 +71,15 @@
                                         <div class="col">
                                             <p class="lead mb-0 font-weight-bold">€{{ product.price }}</p>
                                             <p class="mb-2">
-                                                    {% if product.category.parent %}
-                                                    <a class="text-muted" href="{% url 'products' %}?category={{ product.category.parent.subcategories.all|join:',' }}">
-                                                        {{ product.category.parent.name|capfirst }}
-                                                    {% else %}
-                                                    <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name}}">
-                                                        {{ product.category.name|capfirst }}
-                                                    {% endif %}
-                                                    </a>
+                                                {% if product.category.parent %}
+                                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.parent.name }},{% for subcat in product.category.parent.subcategories.all %}{{ subcat.name }}{% if not forloop.last %},{% endif %}{% endfor %}">
+                                                    {{ product.category.parent.name|capfirst }}
+                                                </a>
+                                            {% else %}
+                                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                                    {{ product.category.name|capfirst }}
+                                                </a>
+                                            {% endif %}
 
 
                                                     {% with children|join:',' as child_list %}
