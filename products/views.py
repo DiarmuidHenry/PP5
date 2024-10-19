@@ -57,15 +57,6 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
-def product_detail(request, product_id):
-    # Show details of a single product
-    product = get_object_or_404(Product, pk=product_id)
-    context = {
-        'product': product,
-    }
-
-    return render(request, 'products/product_detail.html', context)
-
 @login_required
 def rate_product(request, product_id):
     product = get_object_or_404(Product, id=product_id)
@@ -87,7 +78,6 @@ def rate_product(request, product_id):
     # Redirect back to the product details page
     return redirect('product_detail', product_id=product.id)
 
-@login_required
 def product_detail(request, product_id):
     # Show details of a single product
     product = get_object_or_404(Product, pk=product_id)

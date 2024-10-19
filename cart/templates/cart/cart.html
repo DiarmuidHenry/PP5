@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="mb-3 mt-1">Shopping Cart</h2>
+            <h2 class="mb-3 mt-1 text-color-3">Shopping Cart</h2>
             <hr>
         </div>
     </div>
@@ -37,9 +37,9 @@
                     <tr>
                         <td class="p-2 w-25">
                             {% if item.product.image %}
-                            <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                             {% else %}
-                            <img class="img-fluid rounded" src="/media/no_image.jpg">
+                            <img class="img-fluid rounded" src="https://res.cloudinary.com/drrywrvwv/image/upload/v1729274738/background_small_uxkai1.jpg" alt="{{ item.product.name }}">
                             {% endif %}
                         </td>
                         <td class="py-2 w-50">
@@ -111,7 +111,7 @@
                 </table>
             </div>
             {% else %}
-            <p class="lead mb-5">Your cart is empty.</p>
+            <p class="lead mb-5 text-color-3">Your cart is empty.</p>
             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                 <span
                     class="p-2 mt-2 badge badge-white text-black rounded-0 border-0 background-color-4 border-dark">

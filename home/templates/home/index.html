@@ -21,12 +21,12 @@
             </p>
             <div class="my-5">
                 <h4>
-                    <a href="{% url 'products' %}" class="shop-now-button btn btn-large rounded-0 py-3">See our products</a>
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-large text-white font-weight-bold py-3">See our products</a>
                 </h4>
             </div>
             <div class="my-5"> 
                 <h4>
-                    <a href="https://www.facebook.com/profile.php?id=61563367211212" target="_blank" rel="nofollow" class="shop-now-button btn btn-large rounded-0 py-3">Visit our Facebook page</a>
+                    <a href="https://www.facebook.com/profile.php?id=61563367211212" target="_blank" rel="nofollow" class="shop-now-button btn btn-large text-white font-weight-bold rounded-0 py-3">Visit our Facebook page</a>
                 </h4>
             </div>
         </div>
@@ -38,35 +38,35 @@
             <h2 class="text-color-5 my-3 font-weight-bold">Websites we support:</h2>
             <div class="row">
 
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 text-color-3">
                     <div class="card">
                         <img src="https://static.wixstatic.com/media/11062b_f6cceeaca2684c288cc0f22949d210f7~mv2.jpg/v1/fill/w_973,h_369,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Forest%20Path.jpg" class="card-img-top" alt="Zero Waste Collective">
                         <div class="card-body">
                             <h5 class="card-title">Zero Waste Collective</h5>
                             <p class="card-text">A blog and lifestyle website about going zero waste, sustainable living, and minimalism.</p>
-                            <a href="https://www.thezerowastecollective.com/" target="_blank" rel="nofollow" class="btn btn-primary">Visit Website</a>
+                            <a href="https://www.thezerowastecollective.com/" target="_blank" rel="nofollow" class="btn background-color-3 text-white font-weight-bold">Visit Website</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 text-color-3">
                     <div class="card">
                         <img src="https://twothirds.com/cdn/shop/files/1-Wool_773295ec-40af-484a-8551-061e4be4ec91.jpg?v=1728560449&width=352" class="card-img-top" alt="Two Thirds Clothing">
                         <div class="card-body">
                             <h5 class="card-title">Two Thirds</h5>
                             <p class="card-text">Two Thirds make clothing from sustainable and recycled materials to care for you and our planet.</p>
-                            <a href="https://twothirds.com/?srsltid=AfmBOoqg9GxBUZHs8hxlNkPMAoNvVVZoTBVrMVOQCy8_elURqMlAoWRR" target="_blank" rel="nofollow" class="btn btn-primary">Visit Website</a>
+                            <a href="https://twothirds.com/?srsltid=AfmBOoqg9GxBUZHs8hxlNkPMAoNvVVZoTBVrMVOQCy8_elURqMlAoWRR" target="_blank" rel="nofollow" class="btn background-color-3 text-white font-weight-bold">Visit Website</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 text-color-3">
                     <div class="card">
                         <img src="https://slowstreet.ie/cdn/shop/files/166.png?v=1727108418&width=1080" class="card-img-top" alt="Website 3">
                         <div class="card-body">
                             <h5 class="card-title">Slow Street</h5>
                             <p class="card-text">Slow Street was born from a vision to make environmentally friendly, ethically made clothing more accessible and enjoyable to shop.</p>
-                            <a href="https://slowstreet.ie/?srsltid=AfmBOorqQs408Mv-FjUsefwICaOZ4lcTLd6FjebITi2-bLMywIbA7O0v" target="_blank" rel="nofollow" class="btn btn-primary">Visit Website</a>
+                            <a href="https://slowstreet.ie/?srsltid=AfmBOorqQs408Mv-FjUsefwICaOZ4lcTLd6FjebITi2-bLMywIbA7O0v" target="_blank" rel="nofollow" class="btn background-color-3 text-white font-weight-bold">Visit Website</a>
                         </div>
                     </div>
                 </div>
@@ -82,10 +82,10 @@
             <form method="post" action="{% url 'newsletter_signup' %}">
                 {% csrf_token %}
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                    <input type="text" class="form-control" name="name" aria-label="Newsletter Sign Up Name" placeholder="Your Name" required>
+                    <input type="email" class="form-control" name="email" aria-label="Newsletter Sign Up Email" placeholder="Your Email" required>
                     <div class="input-group-append">
-                        <button class="btn btn-primary" type="submit">Sign Up</button>
+                        <button class="btn background-color-3 text-white font-weight-bold" type="submit">Sign Up</button>
                     </div>
                 </div>
             </form>

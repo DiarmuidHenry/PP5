@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2>Products</h2>
+                <h2 class="text-color-3">Products</h2>
                 {% if current_categories %}
     {% for cat in current_categories %}
         {% if cat.parent %}
@@ -44,7 +44,7 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'products' %}">All Products</a> | </span>
+                                <span class="lead font-weight-bold"><a class="text-color-3 font-weight-bold" href="{% url 'products' %}">All Products</a> | </span>
                             {% endif %}
                             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
@@ -53,7 +53,7 @@
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
+                            <div class="card h-100 border-0 text-color-3">
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -64,7 +64,7 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0 text-center">
-                                    <p class="mb-0">{{ product.name }}</p>
+                                    <p class="mb-0 lead font-weight-bold">{{ product.name }}</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-center">
                                     <div class="row">
@@ -81,14 +81,11 @@
                                                 </a>
                                             {% endif %}
 
-
                                                     {% with children|join:',' as child_list %}
                                                     <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ child_list }}">
                                                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ parent.name|capfirst }}</span>
                                                     </a>
                                                     {% endwith %}
-
-
                                             </p>
                                             {% if product.average_rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.average_rating }} / 5</small>

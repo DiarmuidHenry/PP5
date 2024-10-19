@@ -25,7 +25,6 @@ def my_orders(request):
 
 
 @login_required
-@login_required
 def order_details(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
