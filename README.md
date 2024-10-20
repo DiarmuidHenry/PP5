@@ -10,20 +10,17 @@ This project is a Django based website for an e-commerce shop called Sustainable
 
 - [Goals](#goals)
 - [Key Features](#key-features)
-- [Potential Users](#potential-users)
 - [UX Design & Development](#ux-design--development)
   - [5 Layers of UX](#5-layers-of-ux)
-  - [Agile Development](#agile-development)
   - [Wireframes](#wireframes)
-  - [Images](#images)
-  - [Colour Scheme](#colour-scheme)
+  - [Agile Development](#agile-development)
 - [Data Model](#data-model)
-  - [Booking](#booking)
-  - [Allergens](#allergens)
+- [SEO (Search Engine Optimization)](#seo-search-engine-optimization)
+- [E-Commerce & Marketing](#e-commerce--marketing)
 - [Technology & Resources](#technology--resources)
 - [Deployment](#deployment)
   - [How to Clone Repository](#how-to-clone-repository)
-  - [How to Deploy to Heroku](#how-to-deploy-to-heroku)
+  - [How to Deploy to Heroku](#how-to-deploy-to-heroku-including-custom-postgresql-database-setup)
 - [Issues/Bugs](#issuesbugs)
   - [Resolved](#resolved)
   - [Unresolved](#unresolved)
@@ -33,10 +30,7 @@ This project is a Django based website for an e-commerce shop called Sustainable
   - [WAVE Testing](#wave-testing)
   - [HTML Validation](#html-validation)
   - [CSS Validation](#css-validation)
-  - [JS Validation](#js-validation)
-  - [Python Validation](#python-validation)
 - [Future Improvements/Developments](#future-improvementsdevelopments)
-- [Acknowledgments](#acknowledgments)
 
 
 ## Goals
@@ -225,7 +219,7 @@ I initially created a small number of epics, each of which consisted of multiple
 
 All __must have__ user stories were acheived, as well as almost all __should have__ user stories. The few __could have__ tasks were not completed, as the amount of time and resources needed in order to fulfill it would vastly outweigh the minor benefit it would bring.
 
-## Data Models
+## Data Model
 
 Below is an ERD of the models in the project.
 
@@ -241,7 +235,7 @@ To improve audience reach and search engine visibility, various SEO techniques h
 - Sitemap and Robots.txt: A sitemap is included in the application to facilitate search engine bot crawling, while a robots.txt file is provided to manage how and what content should be crawled. This ensures that sensitive or unnecessary pages are excluded from search engine results.
 - 404 and 500 Pages: Custom 404 error and 500 network error pages are in place with appropriate messaging and a redirect back to the home page, ensuring that users who encounter non-existent content are not left stranded.
 
-## E-commerce & Marketing
+## E-Commerce & Marketing
 
 The application incorporates key marketing strategies and follows fundamental e-commerce principles to reach and engage the target audience:
 
@@ -250,7 +244,6 @@ The application incorporates key marketing strategies and follows fundamental e-
 - E-commerce Model: The application follows a B2C (Business-to-Consumer) e-commerce model, where users can browse products, add items to a cart, and complete purchases online. The business model is supported by features like a user-friendly checkout process and product ratings.
 
 These strategies enhance the brand’s online presence and customer reach while ensuring a smooth and efficient e-commerce experience.
-
 
 ## Technology & Resources
 
@@ -271,8 +264,6 @@ These strategies enhance the brand’s online presence and customer reach while 
 - **Kaggle**: Helpful source for database populating.
 
 ## Deployment
-
-### Heroku
 
 ### How to Clone Repository
 
@@ -358,36 +349,82 @@ Below are the records for the manual testing of all functionalities of the appli
 
 |Test Item|Test Carried Out|Result|Pass/Fail|
 |-------------|------------------|-----------|-------|
+| Navbar Links| Click each navbar link to ensure that the correct dropdown menu appears. For ecah item in the dropdown, ensure it leads to the correct page.| Dropdowns appear as expected, pages load as expected| Pass|
+| Navbar Visibility| Ensure the navbar is visible on all pages and responsive.| Navbar visible/responsive| Pass|
+| Logged-in User Display| Check if logged-in user’s email appears in the navbar, and that 'My Account' appears otherwise| User's email appears only when logged in.| Pass|
+| User icon| Click on user icon.| Dropdown menu appears with relevant options (see next point)| Pass|
+| Visibility of Product Management and My Orders| Sign in with superuser, ensure Product Management and My Orders are both visible. Sign in with regular user, ensure only My Orders is visibile. Sign out, ensure neither are visible and Sign In and Sign Up appear instead.| Each scenario appeared as expected.| Pass|
 
 **Home**
 
 |Test Item|Test Carried Out|Result|Pass/Fail|
 |-------------|------------------|-----------|-------|
+| Home Page Load| Check that the home page loads correctly.| Page loads successfully| Pass|
+| External Website Links| Verify that images, text and links for all external websites appear and function as expected.| Links open in new tabs; text and images are correct| Pass|
+| See our Products button.| Click on See our Products button.| All products load on Products page| Pass|
+| Facebook Page button| Click on Facebook page button | Facebook Business page opens in new tab.| Pass|
+| Newsletter Sign Up| Attempt to sign up with both valid and invalid entries in the Name and Email field.| Data validation stops any invalid data from being entered. A valid name and email results in a confirmation message and a respective entry in the NewsletterSignUp database.| Pass|
 
 **Products Page**
 
 |Test Item|Test Carried Out|Result|Pass/Fail|
 |-------------|------------------|-----------|-------|
+| Product Listings| Check if all products display on the products page when no search/filter is applied.| Products display correctly| Pass|
+| Product Queries| Enter text into search bar and ensure resulting products match with the entered text.| Only products whose name/description/options contain the searched word/s are displayed.| Pass|
+| Category Filter| Apply each filter and sub-filter, ensuring the resulting products are correctly categorised.| Filtering works as expected| Pass|
+| Sort Functionality| Choose the various sorting methods and check that the order of items match with the sorting criteria. | Sorting functions correctly| Pass|
 
 **Product Details**
 
 |Test Item|Test Carried Out|Result|Pass/Fail|
 |-------------|------------------|-----------|-------|
+| Product Information| Check that product information is displayed and correctly reflects information in database.| All details visible and accurate.| Pass|
+| Category link| Click on link with item's category name.| Redirected to products with the relevant category filter applied| Pass|
+| Quantity buttons/field| Ensure that only 1-99 are accepted in the Quantity field, and that the buttons function as expected.| Buttons and field function as expeceted| Pass|
+| Keep Shopping button| Click on Keep Shopping button.| Redirected to all products on products page| Pass|
+| Add to Cart button| Click Add to Cart button.| Correct quantity of product (with option, where appropriate) is added to the cart. A small confirmation message appears.| Pass|
+| Product Ratings | Check the product rating system displays and functions.| Rating displays correctly| Pass|
+|| Sign out and ensure that no signed out users can submit ratings.| User is asked to log in to submit rating| Pass|
+|| Submit an initial rating whilst signed in.| Page reloads, average rating is recalculated, users rating is shown on star icons| Pass|
+|| Submit an alternate rating whilst signed in.| Page reloads, average rating is recalculated, users new rating is shown on star icons| Pass|
+| Product Options| Ensure that product options (e.g. patter, colour) match those belonging to the product in the database.| Correct options appear| Pass|
 
 **Cart**
 
 |Test Item|Test Carried Out|Result|Pass/Fail|
 |-------------|------------------|-----------|-------|
+| Cart Page Load| Check that the cart page loads correctly.| Cart page loads successfully| Pass|
+| Remove Item from Cart| Click Remove button/link under item quantity| Item/s removed successfully| Pass|
+| Total Calculation| Ensure that the cart totals are calculated correctly.| Totals are correct| Pass|
+| Keep Shopping button| Click on Keep Shopping button.| Redirected to all products on products page| Pass|
+| Secure Checkout button| Click on Secure Checkout button.| Redirected to checkout page with current items in cart| Pass|
 
 **Checkout**
 
 |Test Item|Test Carried Out|Result|Pass/Fail|
 |-------------|------------------|-----------|-------|
+| Checkout Page Load| Check that the checkout page loads and displays correctly.| Checkout page loads| Pass|
+| Payment Integration| Use example accepted/not accepted card details in Stripe documentation to attempt several checkouts.| Payments process as they should| Pass|
+| Order Summary Displayy| Complete a valid order and ensure order summary displays.| Order summary is accurate| Pass|
+| Save Information Option   | Test if the "Save info" checkbox functions as expected.| Info saved successfully when checked, not saved when not checked| Pass|
 
 **My Orders**
 
 |Test Item|Test Carried Out|Result|Pass/Fail|
 |-------------|------------------|-----------|-------|
+| Orders List Display| Check that a logged-in user can see their past orders.| Orders display correctly| Pass|
+| View Order Details| Test if clicking on an order shows detailed information.| Details load correctly  | Pass|
+| Order Date and Number| Verify that order date and number match with the information in the database, and with the signed in user.| Date and number are correct| Pass|
+
+**Product Management**
+
+|Test Item|Test Carried Out|Result|Pass/Fail|
+|-------------|------------------|-----------|-------|
+| Product Management page load| Check that the product management page loads correctly.| Page loads successfully  | Pass|
+| Add New Product Form| Verify that the form to add a new product is visible.| Form is displayed| Pass|
+| Required Fields| Test if required fields are validated and new items will not be added whilst these fields are empty.| Validation works correctly| Pass|
+| Image Upload| Ensure that uploading product images functions correctly.| Image uploads successfully| Pass|
+| Add Product| Add a new product, then check the database and products page on website.| Product added successfully, appears in both the database and on the website.| Pass|
 
 **Error Pages**
 
@@ -404,15 +441,15 @@ The website receieves high score on all pages. Below is the result from the *Hom
 
 ### WAVE Testing
 
-Web Accessibility Evaluation Tools revealed a few errors: it repeatedly gave 'Missing Form Label' and 'Empty Link'. However, after further inspection, I could see that this was due to the structure of the code, not the lacj of labels. All forms are labelled and there are no empty link; the inclusion of divs and spans inside forms/anchors led to this. Since this is standard practise and not an accessibility issue, I did not make any changes. No other errors were obtained. the styling and appearance of the navbar.
+Web Accessibility Evaluation Tools revealed a few errors: it repeatedly gave 'Missing Form Label' and 'Empty Link'. However, after further inspection, I could see that this was due to the structure of the code, not the lack of labels. All forms are labelled and there are no empty links; the inclusion of divs and spans inside forms/anchors led to this. Since this is standard practise and not an accessibility issue, I did not make any changes. No other errors were obtained.
 
-### HTML
+### HTML Validation
 
 The site passed the W3C HTML Validator with no issues.
 
-![HTML Validation](/media/readme-images/html_validatino.png)
+![HTML Validation](/media/readme-images/html_validation.png)
 
-### CSS
+### CSS Validation
 
 The site passed the W3C CSS Validator with no issues.
 
