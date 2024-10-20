@@ -58,7 +58,7 @@ This project is a Django based website for an e-commerce shop called Sustainable
 
 ![Navbar Logged In](/media/readme-images/logged_in.png)
 
-- Products clearly displayed with an image, alongside their name, price, category and rating. Clicking on the image leads to mroe product details; clicking on the category leads to all items in that category.
+- Products clearly displayed with an image, alongside their name, price, category and rating. Clicking on the image leads to more product details; clicking on the category leads to all items in that category.
 
 ![Product List](/media/readme-images/product_list.png)
 
@@ -231,7 +231,7 @@ To improve audience reach and search engine visibility, various SEO techniques h
 
 - Internal Linking: Every page is reachable via links from other pages, ensuring a logical structure that search engines can easily crawl. This helps improve the overall accessibility and ranking of the site.
 - Meta Tags and Titles: Meta description tags are included on all key pages to provide search engines with relevant information about the content. Additionally, the site title is set in the parent template to ensure consistent branding and SEO-friendly structure across all pages.
-- Link Attributes: The proper use of nofollow for paid or distrusted links and sponsored for sponsored content is implemented to define relationships between linked documents correctly.
+- Link Attributes: The proper use of "nofollow" for paid or distrusted links and "sponsored" for sponsored content is implemented to define relationships between linked documents correctly.
 - Sitemap and Robots.txt: A sitemap is included in the application to facilitate search engine bot crawling, while a robots.txt file is provided to manage how and what content should be crawled. This ensures that sensitive or unnecessary pages are excluded from search engine results.
 - 404 and 500 Pages: Custom 404 error and 500 network error pages are in place with appropriate messaging and a redirect back to the home page, ensuring that users who encounter non-existent content are not left stranded.
 
@@ -239,7 +239,7 @@ To improve audience reach and search engine visibility, various SEO techniques h
 
 The application incorporates key marketing strategies and follows fundamental e-commerce principles to reach and engage the target audience:
 
-- Facebook Business Page: A dedicated [Facebook Business Page]() has been created to promote the site and expand its social media reach. This helps engage potential customers and drive traffic to the site.
+- Facebook Business Page: A dedicated [Facebook Business Page](https://www.facebook.com/profile.php?id=61563367211212) has been created to promote the site and expand its social media reach. This helps engage potential customers and drive traffic to the site.
 - Newsletter Signup: The application includes a newsletter signup form, allowing users to subscribe for updates, offers, and news. This helps build a mailing list for direct marketing efforts and strengthens customer engagement.
 - E-commerce Model: The application follows a B2C (Business-to-Consumer) e-commerce model, where users can browse products, add items to a cart, and complete purchases online. The business model is supported by features like a user-friendly checkout process and product ratings.
 
@@ -281,22 +281,19 @@ These strategies enhance the brand’s online presence and customer reach while 
    - Go to the **Settings** tab, click on **Reveal Config Vars**.
    - In the **KEY** field, enter `DATABASE_URL`.
    - In the **VALUE** field, enter the PostgreSQL URL of your database.(e.g., `postgres://<username>:<password>@<host>:<port>/<database_name>`).
-4. In the **KEY** field, also enter any other secret/sensitive variables from your `env.py` file (e.g., `SECRET_KEY`, `CLOUDINARY_URL`).
-   - Example: `SECRET_KEY`, `CLOUDINARY_URL`, etc.
-   - In the **VALUE** field, enter the corresponding values.
-5. Go to the **Deploy** tab. Beside **Deployment method**, click **GitHub**, then confirm by clicking **Connect to GitHub**.
-6. Under **Search for a repository to connect to**, type the name of the repo (whether it be the name of this repo or the one you cloned). Click **Search**, then **Connect** when the repo name appears. The Heroku app is now linked to the GitHub repo.
-7. If you'd like Heroku to automatically deploy the app when you push changes to GitHub, click on **Enable Automatic Deploys** (this is optional).
-8. Deploy the app by scrolling down and clicking **Deploy Branch**. Heroku will show the deployment logs as it builds the app. This will take a few moments.
-9. When the app has finished deploying, a message will appear saying **Your app was successfully deployed**. Click **View** to open the app in a new tab.
-10. **Migrate the database**:
+4. Go to the **Deploy** tab. Beside **Deployment method**, click **GitHub**, then confirm by clicking **Connect to GitHub**.
+5. Under **Search for a repository to connect to**, type the name of the repo (whether it be the name of this repo or the one you cloned). Click **Search**, then **Connect** when the repo name appears. The Heroku app is now linked to the GitHub repo.
+6. If you'd like Heroku to automatically deploy the app when you push changes to GitHub, click on **Enable Automatic Deploys** (this is optional).
+7. Deploy the app by scrolling down and clicking **Deploy Branch**. Heroku will show the deployment logs as it builds the app. This will take a few moments.
+8. When the app has finished deploying, a message will appear saying **Your app was successfully deployed**. Click **View** to open the app in a new tab.
+9. **Migrate the database**:
     - Open the **More** dropdown (top-right corner of your Heroku app's dashboard) and click on **Run Console**.
     - In the console, run the following commands to apply migrations and set up the database:
       ```bash
       python3 manage.py migrate
       python3 manage.py createsuperuser  # Optional, to create an admin user
       ```
-11. If you have any initial data to load into the database (e.g., categories or product information), you can use:
+10. If you have any initial data to load into the database (e.g., categories or product information), you can use:
     ```bash
     python3 manage.py loaddata <fixture_name>
     ```
@@ -323,17 +320,17 @@ The app is now live in Heroku.
 
 - **Some URLs unexpectedly returning 404 errors**
 
-  Whilst testing the site, some urls unexpectedly returned 404 errors, even `/admin`. I read the error logs and realised that the issue was that earlier, I had set `APPEND_SLASH = False`. Return this to `True` fixed this. 
+  Whilst testing the site, some urls unexpectedly returned 404 errors, even `/admin`. I read the error logs and realised that the issue was that earlier, I had set `APPEND_SLASH = False`. Returning this to `True` fixed this. 
 
 - **Error when incorporating the Ratings model**
 
   Once I had created and migrated the ratings model, I was having issues whenever it was being called in `views.py`:
 
-  ![Avg Error - Before](/media/readme-images/bug_product_management_before.png)
+  ![Avg Error - Before](/media/readme-images/bug_avg_before.png)
 
   This was due to it using `Avg` from `django.db.models`, which had not been imported. Adding it to the initial imports quickly fixed that.
 
-  ![Product Management Error - After](/media/readme-images/bug_product_management_after.png)
+  ![Product Management Error - After](/media/readme-images/bug_avg_after.png)
 
 ### Unresolved
 
