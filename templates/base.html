@@ -79,7 +79,7 @@
                                 {% endif %}
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-superuser-options">
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'product_management' %}" class="dropdown-item">Product Management</a>
@@ -150,7 +150,7 @@
     {% endblock %}
 
     {% block postload_js %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
     {% endblock %}
