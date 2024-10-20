@@ -114,6 +114,10 @@ The user's rating then remains, unless they change and resubmit. Every time a ne
 
 ![My Order Details](/media/readme-images/my_order_details.png)
 
+- A Facebook Business page for the site has been created.
+
+![Facebook Business Page](/media/readme-images/facebook_business.jpeg)
+
 ## UX Design & Development
 
 ### 5 Layers of UX
@@ -219,14 +223,34 @@ I initially created a small number of epics, each of which consisted of multiple
  - [USER STORY: Newsletter](https://github.com/DiarmuidHenry/PP5/issues/23)
 
 
-All __must have__ user stories were acheived, as well as almost all __should have__ user stories. The only __could have__ task was not completed, as the amount of time and resources needed in order to fulfill it would vastly outweigh the minor benefit it would bring.
-
+All __must have__ user stories were acheived, as well as almost all __should have__ user stories. The few __could have__ tasks were not completed, as the amount of time and resources needed in order to fulfill it would vastly outweigh the minor benefit it would bring.
 
 ## Data Models
 
 Below is an ERD of the models in the project.
 
 ![Entity Relationship Diagram](/media/readme-images/erd.png)
+
+## SEO (Search Engine Optimization)
+
+To improve audience reach and search engine visibility, various SEO techniques have been employed throughout the application:
+
+- Internal Linking: Every page is reachable via links from other pages, ensuring a logical structure that search engines can easily crawl. This helps improve the overall accessibility and ranking of the site.
+- Meta Tags and Titles: Meta description tags are included on all key pages to provide search engines with relevant information about the content. Additionally, the site title is set in the parent template to ensure consistent branding and SEO-friendly structure across all pages.
+- Link Attributes: The proper use of nofollow for paid or distrusted links and sponsored for sponsored content is implemented to define relationships between linked documents correctly.
+- Sitemap and Robots.txt: A sitemap is included in the application to facilitate search engine bot crawling, while a robots.txt file is provided to manage how and what content should be crawled. This ensures that sensitive or unnecessary pages are excluded from search engine results.
+- 404 and 500 Pages: Custom 404 error and 500 network error pages are in place with appropriate messaging and a redirect back to the home page, ensuring that users who encounter non-existent content are not left stranded.
+
+## E-commerce & Marketing
+
+The application incorporates key marketing strategies and follows fundamental e-commerce principles to reach and engage the target audience:
+
+- Facebook Business Page: A dedicated [Facebook Business Page]() has been created to promote the site and expand its social media reach. This helps engage potential customers and drive traffic to the site.
+- Newsletter Signup: The application includes a newsletter signup form, allowing users to subscribe for updates, offers, and news. This helps build a mailing list for direct marketing efforts and strengthens customer engagement.
+- E-commerce Model: The application follows a B2C (Business-to-Consumer) e-commerce model, where users can browse products, add items to a cart, and complete purchases online. The business model is supported by features like a user-friendly checkout process and product ratings.
+
+These strategies enhance the brand’s online presence and customer reach while ensuring a smooth and efficient e-commerce experience.
+
 
 ## Technology & Resources
 
@@ -258,34 +282,71 @@ Below is an ERD of the models in the project.
 4. Open your IDE, and open a terminal.
 5. Enter `git clone url`, replacing `url` with the URL copied in step 3.
 
-### How to deploy to Heroku
+### How to Deploy to Heroku (Including Custom PostgreSQL Database Setup)
 
 1. Log in to [Heroku](https://www.heroku.com/). If you do not already have an account, you can [sign up here](https://signup.heroku.com/).
-2. Click **Create new app** on the Heroku Dashboard. Give the app a unique name. Select your region, click **Create app**.
-3. Go to the **Settings** tab, click on **Reveal Config Vars**.
-4. In the **KEY** field, enter the secret/sensitive variable names that you have/will store in your `env.py` file. For example, `DATABASE_URL`, `CLOUDINARY_URL`. \
-In the corresponding `VALUE` field, enter the value for these variables. For example, `postgres://<sensitive_information_included_here>/<your_database_name>`, `cloudinary.url/details`.
+2. Click **Create new app** on the Heroku Dashboard. Give the app a unique name, select your region, and click **Create app**.
+3. **Configure your custom PostgreSQL database**:
+   - Go to the **Settings** tab, click on **Reveal Config Vars**.
+   - In the **KEY** field, enter `DATABASE_URL`.
+   - In the **VALUE** field, enter the PostgreSQL URL of your database.(e.g., `postgres://<username>:<password>@<host>:<port>/<database_name>`).
+4. In the **KEY** field, also enter any other secret/sensitive variables from your `env.py` file (e.g., `SECRET_KEY`, `CLOUDINARY_URL`).
+   - Example: `SECRET_KEY`, `CLOUDINARY_URL`, etc.
+   - In the **VALUE** field, enter the corresponding values.
 5. Go to the **Deploy** tab. Beside **Deployment method**, click **GitHub**, then confirm by clicking **Connect to GitHub**.
-6. Under **Search for a repository to connect to**, type the name of the repo (whether that be the name of this repo, or of the one you have cloned). Click **Search**, then click **Connect** when the repo name appears. The Heroku app is now linked to the GitHub repo.
-7. If you would like Heroku to manually update the app every time you push chances to GitHub, click on **Enable Automatic Deploys**. (This is optional).
-8. Deploy the app by scrolling down and clicking **Deploy Branch**. Heroku will show you the deployment logs as it builds the app. This will take a few seconds.
-9. When the app is finished being built, a message will appear saying **Your app was successfully deployed**. Click the **View** button to view the app (opens in a new tab).
+6. Under **Search for a repository to connect to**, type the name of the repo (whether it be the name of this repo or the one you cloned). Click **Search**, then **Connect** when the repo name appears. The Heroku app is now linked to the GitHub repo.
+7. If you'd like Heroku to automatically deploy the app when you push changes to GitHub, click on **Enable Automatic Deploys** (this is optional).
+8. Deploy the app by scrolling down and clicking **Deploy Branch**. Heroku will show the deployment logs as it builds the app. This will take a few moments.
+9. When the app has finished deploying, a message will appear saying **Your app was successfully deployed**. Click **View** to open the app in a new tab.
+10. **Migrate the database**:
+    - Open the **More** dropdown (top-right corner of your Heroku app's dashboard) and click on **Run Console**.
+    - In the console, run the following commands to apply migrations and set up the database:
+      ```bash
+      python3 manage.py migrate
+      python3 manage.py createsuperuser  # Optional, to create an admin user
+      ```
+11. If you have any initial data to load into the database (e.g., categories or product information), you can use:
+    ```bash
+    python3 manage.py loaddata <fixture_name>
+    ```
+
+The app is now live in Heroku.
 
 ## Issues/Bugs
 
 ### Resolved
 
-- **Resolved Bug Example**
+- **No products appearing when category was clicked**
 
-  ![Image title](/media/readme-images/image_name.png)
+  This happened because the category name was being capitalised by the `|title` filter before being entered as a query, rather than before being displayed in the HTML. This was an easy fix.
 
-  Information about the bug and how it was fixed.
+- **New items in Product Management with no options (e.g. colours) not being accepted**
 
-  ![Chosen allergens stored](/media/readme-images/bug_filter_choices_lost_1.png)
+  The way in which I had defined `clean_options` led to a 500 error if there were no options added.
+
+  ![Product Management Error - Before](/media/readme-images/bug_product_management_before.png)
+
+  By simply addressing the case where there were no options in the code and returning nothing, this error was quickly fixed.
+
+  ![Product Management Error - After](/media/readme-images/bug_product_management_after.png)
+
+- **Some URLs unexpectedly returning 404 errors**
+
+  Whilst testing the site, some urls unexpectedly returned 404 errors, even `/admin`. I read the error logs and realised that the issue was that earlier, I had set `APPEND_SLASH = False`. Return this to `True` fixed this. 
+
+- **Error when incorporating the Ratings model**
+
+  Once I had created and migrated the ratings model, I was having issues whenever it was being called in `views.py`:
+
+  ![Avg Error - Before](/media/readme-images/bug_product_management_before.png)
+
+  This was due to it using `Avg` from `django.db.models`, which had not been imported. Adding it to the initial imports quickly fixed that.
+
+  ![Product Management Error - After](/media/readme-images/bug_product_management_after.png)
 
 ### Unresolved
 
-- Unresolved bug example. Explanation of bug and why it wasn't fixed. How will it be addressed in future development?
+There are no unresolved bugs. However, there are new features and expansions of current features that I feel are worth mentioning. [These can be found in Future Improvements/Developments](#future-improvementsdevelopments). 
 
 ## Testing & Validation
 
@@ -356,6 +417,7 @@ The site passed the W3C HTML Validator with no issues.
 The site passed the W3C CSS Validator with no issues.
 
 ![CSS Validation](/media/readme-images/css_validation.png)
+
 ## Future Improvements/Developments
 
 - Add more functionality to the Product Development page, allowing the site owner to edit and remove products without having to access the admin panel.
