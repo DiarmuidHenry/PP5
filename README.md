@@ -15,7 +15,7 @@ This project is a Django based website for an e-commerce shop called Sustainable
   - [Wireframes](#wireframes)
   - [Agile Development](#agile-development)
 - [Data Model](#data-model)
-- [SEO (Search Engine Optimization)](#seo-search-engine-optimization)
+- [SEO (Search Engine Optimisation)](#seo-search-engine-optimisation)
 - [E-Commerce & Marketing](#e-commerce--marketing)
 - [Technology & Resources](#technology--resources)
 - [Deployment](#deployment)
@@ -36,14 +36,16 @@ This project is a Django based website for an e-commerce shop called Sustainable
 ## Goals
 
 - To build a functioning website for an e-commerce business.\
-[EPIC: Admin/Housekeeping](https://github.com/DiarmuidHenry/Restaurant-Booking/issues/20)
+[EPIC: Admin/Housekeeping](https://github.com/DiarmuidHenry/PP5/issues/5)
 - To allow the shop owner to add their products to the site, ensuring these accurately represent the actual products.\
-[EPIC: Products](https://github.com/DiarmuidHenry/Restaurant-Booking/issues/20)
+[EPIC: Products](https://github.com/DiarmuidHenry/PP5/issues/9)
 - To allow users to easily make purchases online.\
-[EPIC: Purchasing](https://github.com/DiarmuidHenry/Restaurant-Booking/issues/20)
+[EPIC: Purchasing](https://github.com/DiarmuidHenry/PP5/issues/14)
 - To allow users to create an account, allowing them to see any current orders they have.\
-[EPIC: User Account](https://github.com/DiarmuidHenry/Restaurant-Booking/issues/28)
-- Users can easily and clearly navigate the site, with the sight remaining attractive and user friendly.
+[EPIC: User Accounts](https://github.com/DiarmuidHenry/PP5/issues/8)
+- To implement effective marketing, SEO and outreach strategies, to increase customer engagement and drive sales.\
+[EPIC: Marketing & Outreach](https://github.com/DiarmuidHenry/PP5/issues/20)
+
 
 
 ## Key Features
@@ -62,11 +64,11 @@ This project is a Django based website for an e-commerce shop called Sustainable
 
 ![Product List](/media/readme-images/product_list.png)
 
-- Product details shown on a new page, with a larger image, as well as the product's description. The option to add to cart now appears, as well as an option to give a rating.
+- Product details shown on a new page, with a larger image, as well as the product's description. The option to add to cart now appears, as well as an option to give a rating (when the user is logged in).
 
 ![Product Details](/media/readme-images/product_details.png)
 
-- A logged in user can give a rating of between 1 and 5 stars. If 4 is chosen (as in the image), the first 4 stars become selected. The user can then confirm this by seleceting *Submit Rating*.
+- A logged in user can give a rating of between 1 and 5 stars. If 4 is chosen (as in the image), the first 4 stars become highlighted. The user can then confirm this by selecting *Submit Rating*.
 
 ![New Rating](/media/readme-images/new_rating.png)
 
@@ -225,7 +227,7 @@ Below is an ERD of the models in the project.
 
 ![Entity Relationship Diagram](/media/readme-images/erd.png)
 
-## SEO (Search Engine Optimization)
+## SEO (Search Engine Optimisation)
 
 To improve audience reach and search engine visibility, various SEO techniques have been employed throughout the application:
 
@@ -427,12 +429,12 @@ Below are the records for the manual testing of all functionalities of the appli
 
 |Test Item|Test Carried Out|Result|Pass/Fail|
 |-------------|------------------|-----------|-------|
-|404 Error|Force a 404 error by adding `/doesnotexist` to url|404.html loads with link to Home page|PASS|
-|500 Error|Force a 500 error by removing `ALLOWED_HOST` from `settings.py`|500.html loads with link to Home page|PASS|
+|404 Error|Force a 404 error by adding `/doesnotexist` to url|404.html loads with link to Home page|Pass|
+|500 Error|Force a 500 error by removing `ALLOWED_HOST` from `settings.py`|500.html loads with link to Home page|Pass|
 
 ### PageSpeed Testing
 
-The website receieves high score on all pages. Below is the result from the *Home* page.
+The website receieves a high score on all pages. Below is the result from the *Home* page.
 
 ![PageSpeed Result - Home](/media/readme-images/pagespeed_test.png)
 
