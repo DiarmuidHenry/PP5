@@ -27,10 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8000-diarmuidhenry-pp5-rpfrr6h5gw2.ws.codeinstitute-ide.net',
+    '8000-diarmuidhenry-pp5-qlu2wzuw3ob.ws.codeinstitute-ide.net',
     '.herokuapp.com',
     'localhost',
     ]

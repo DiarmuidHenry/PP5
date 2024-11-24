@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<h2>{{ product.name }}</h2>
+<img src="{{ product.image.url }}" alt="{{ product.name }}" style="max-width: 300px;">
+<p><strong>Description:</strong> {{ product.description }}</p>
+<p><strong>Category:</strong> {{ product.category }}</p>
+<p><strong>Price:</strong> {{ product.price }} €</p>
+<p><strong>CO2 Footprint:</strong> {{ product.co2_footprint }}</p>
+<a href="{% url 'edit_product' product.id %}" class="btn btn-warning">Edit</a>
+<a href="{% url 'delete_product' product.id %}" class="btn btn-danger">Delete</a>
+<a href="{% url 'product_management' %}" class="btn btn-info">Back to Products</a>
+
+{% endblock %}

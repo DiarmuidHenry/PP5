@@ -4,7 +4,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category, Rating
 from .forms import ProductForm
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 def all_products(request):
 
@@ -92,15 +92,60 @@ def product_detail(request, product_id):
 @login_required
 def product_management(request):
     if request.user.is_superuser:
-        if request.method == 'POST':
-            form = ProductForm(request.POST, request.FILES)
-            if form.is_valid():
-                form.save()
-                messages.success(request, 'Product added successfully!')
-                return redirect('product_management')
-        else:
-            form = ProductForm()
-        
-        return render(request, 'products/product_management.html', {'form': form})
+        print("Got to here")
+        products = Product.objects.all()
+        print("Product loaded")
+        return render(request, 'products/product_management.html', {'products': products})
     else:
+        print("not registering superuser")
+        messages.error(request, 'You do not have permission to access this page.')
         return redirect('home')
+
+@user_passes_test(lambda u: u.is_superuser)
+def view_product(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'products/view_product.html', context)
+
+@user_passes_test(lambda u: u.is_superuser)
+def edit_product(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product updated successfully!')
+            return redirect('product_management')
+    else:
+        form = ProductForm(instance=product)
+
+    return render(request, 'products/edit_product.html', {'form': form, 'product': product})
+
+@user_passes_test(lambda u: u.is_superuser)
+def delete_product(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+
+    if request.method == 'POST':
+        product.delete()
+        messages.success(request, 'Product deleted successfully!')
+        return redirect('product_management')  # Redirect to product management page
+
+    return render(request, 'products/delete_product.html', {'product': product})
+
+@user_passes_test(lambda u: u.is_superuser)
+def add_product(request):
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product added successfully!')
+            return redirect('product_management')  # Redirect to product management page
+    else:
+        form = ProductForm()
+
+    return render(request, 'products/add_product.html', {'form': form})
