@@ -10,11 +10,13 @@
 {% endblock %}
 
 {% block content %}
+<div class="contatiner text-center justify-content-center my-5 text-black">
 <h2>Are you sure you want to delete the product: {{ product.name }}?</h2>
 <form method="POST">
     {% csrf_token %}
-    <button type="submit" class="btn btn-danger">Delete</button>
+    <button type="submit" class="btn btn-danger my-5">Delete</button>
 </form>
 
-<a href="{% url 'view_product' product.id %}" class="btn btn-secondary">Cancel</a>
+<a href="{% url 'view_product' product.id %}" class="btn btn-secondary my-5">Cancel</a>
+</div>
 {% endblock %}
