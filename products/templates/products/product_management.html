@@ -14,12 +14,16 @@
 
     <h2 class="text-center text-black my-5">Product Management</h2>
 
-    <a href="{% url 'add_product' %}" class="btn btn-danger text-center text-black my-5">Add new product</a>
+    <div class="d-flex justify-content-center">
+        <a href="{% url 'add_product' %}" class="text-center shop-now-button btn btn-large text-white font-weight-bold my-5">
+            Add new product
+        </a>
+    </div>
     
 </div>
-<div>
-    <h3>Existing Products</h3>
-<table class="table">
+<div class="mx-5">
+    <h3 class="text-black">Existing Products</h3>
+<table class="table background-color-4">
     <thead>
         <tr>
             <th>Name</th>

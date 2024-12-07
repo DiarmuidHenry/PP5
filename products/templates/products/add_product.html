@@ -10,17 +10,19 @@
 {% endblock %}
 
 {% block content %}
+<div class="contatiner mx-5 my-5 text-black">
 <h2>Add New Product</h2>
 
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn btn-primary">Add Product</button>
+    <button type="submit" class="btn btn-primary mx-5 mb-5">Add Product</button>
 </form>
 
 {% if message %}
     <div class="alert alert-success" role="alert">
         {{ message }}
     </div>
+</div>
 {% endif %}
 {% endblock %}

@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block content %}
+<div class="contatiner text-center justify-content-center my-5 text-black">
 <h2>{{ product.name }}</h2>
 <img src="{{ product.image.url }}" alt="{{ product.name }}" style="max-width: 300px;">
 <p><strong>Description:</strong> {{ product.description }}</p>
@@ -19,5 +20,5 @@
 <a href="{% url 'edit_product' product.id %}" class="btn btn-warning">Edit</a>
 <a href="{% url 'delete_product' product.id %}" class="btn btn-danger">Delete</a>
 <a href="{% url 'product_management' %}" class="btn btn-info">Back to Products</a>
-
+</div>
 {% endblock %}
