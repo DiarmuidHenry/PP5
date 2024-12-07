@@ -1,7 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.db.models import Avg
-from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.validators import MinValueValidator, MaxValueValidator, DecimalValidator
 from cloudinary.models import CloudinaryField
 
 
@@ -28,7 +28,7 @@ class Product(models.Model):
         default='https://res.cloudinary.com/drrywrvwv/image/upload/v1729274738/background_small_uxkai1.jpg'
     )
     description = models.TextField()
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    price = models.DecimalField(max_digits=10, validators=[MinValueValidator(0.01)], decimal_places=2)
     category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
     co2_footprint = models.FloatField()
     stock = models.IntegerField()
