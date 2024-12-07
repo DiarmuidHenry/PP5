@@ -35,7 +35,7 @@
     <tbody>
         {% for product in products %}
             <tr>
-                <td>{{ product.name }}</td>
+                <td><a href="{% url 'view_product' product.id %}" class="text-black">{{ product.name }}</a></td>
                 <td>{{ product.category }}</td>
                 <td>{{ product.price }} €</td>
                 <td>
