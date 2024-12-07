@@ -415,15 +415,22 @@ Below are the records for the manual testing of all functionalities of the appli
 | View Order Details| Test if clicking on an order shows detailed information.| Details load correctly  | Pass|
 | Order Date and Number| Verify that order date and number match with the information in the database, and with the signed in user.| Date and number are correct| Pass|
 
-**Product Management**
+**Product Management - Main Page**
 
 |Test Item|Test Carried Out|Result|Pass/Fail|
 |-------------|------------------|-----------|-------|
-| Product Management page load| Check that the product management page loads correctly.| Page loads successfully  | Pass|
-| Add New Product Form| Verify that the form to add a new product is visible.| Form is displayed| Pass|
-| Required Fields| Test if required fields are validated and new items will not be added whilst these fields are empty.| Validation works correctly| Pass|
-| Image Upload| Ensure that uploading product images functions correctly.| Image uploads successfully| Pass|
-| Add Product| Add a new product, then check the database and products page on website.| Product added successfully, appears in both the database and on the website.| Pass|
+| Product Management page load| Check that the product management page loads correctly.| Page loads successfully, list of items is accurate.| Pass|
+| Product List table| Verify that information displayed is correct; that *View*/*Edit*/*Delete* buttons work as intended. | Information is correct. *View* button (and item name) lead to page with product details; *Edit* button leads to a form to edit product details; *Delete* button leads to page verifying deletion.| Pass|
+| Add New Product form| Verify that the form only allows correct/valid inputs; that item then appears in the database of products.| Form validation functions as intended; newly created items appear in database.| Pass|
+| | Test if required fields are validated and new items will not be added whilst these fields are empty.| Validation works correctly.| Pass|
+| | Ensure that uploading product images functions correctly.| Image uploads successfully.| Pass|
+| View/Product details page| Check information shown is accurate for clicked product.| Information accurately reflects that stored in the database for the chosen product.| Pass|
+| | Check *Edit*, *Delete* and *Back to Products* buttons leads to correct page for the chosen product.| Buttons works as intended, correct information is shown.| Pass|
+| Edit Product form| Verify that the form only allows correct/valid inputs; that item then appears edited in the database of products.| Form validation functions as intended; edited item appears in place of the older version in database.| Pass|
+| | Clicking *Cancel* leaves the product unchanged.| Remains unchanged is changes aren't saved.| Pass|
+| Delete Product page| Ensure users can't accidentally delete with 1 incorrect click.| User is asked if they are sure that they want to delete the selected product, before it is removed from database.| Pass|
+| | Clicking *Cancel* leaves the product unchanged.| Product is not deleted, no changes are made.| Pass|
+
 
 **Error Pages**
 
@@ -456,6 +463,5 @@ The site passed the W3C CSS Validator with no issues.
 
 ## Future Improvements/Developments
 
-- Add more functionality to the Product Development page, allowing the site owner to edit and remove products without having to access the admin panel.
 - Incorporate the 'stock' attribute into the orders logic. This would automatically update stock levels for individual items, which would be necessary for a large scale shop. For a smaller scale, this is somewhat unnecessary.
 - Add confirmation emails, order dispatch emails etc to be in line with features on other high end e-commerce sites.
