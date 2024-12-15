@@ -110,6 +110,26 @@ The user's rating then remains, unless they change and resubmit. Every time a ne
 
 ![My Order Details](/media/readme-images/my_order_details.png)
 
+- Superusers (and **not** regular users) can access the *Product Management* page, where full CRUD functionality for products is located.
+
+![Product Management Landing Page](/media/readme-images/product_management_landing_page.png)
+
+When *Add Product* is clicked, the superuser is taking to a form to complete details of the new product.
+
+![Product Management Add Product](/media/readme-images/product_management_add_product.png)
+
+When *View* is clicked, a page showing the details of the product, along with its image, are shown.
+
+![Product Management Product Details](/media/readme-images/product_management_product_details.png)
+
+When *Edit* is clicked, the superuser is taken to the same form as *Add Product*, but this time prepopulated with the relevant information from the chosen product to be updated.
+
+![Product Management Edit Product](/media/readme-images/product_management_edit_product.png)
+
+When *Delete* is clicked, a confirmation page appears, ensuring that a single accidental click will not delete a product's entry.
+
+![Product Management Delete Product](/media/readme-images/product_management_delete_product.png)
+
 - A Facebook Business page for the site has been created.
 
 ![Facebook Business Page](/media/readme-images/facebook_business.jpeg)
@@ -219,7 +239,7 @@ I initially created a small number of epics, each of which consisted of multiple
  - [USER STORY: Newsletter](https://github.com/DiarmuidHenry/PP5/issues/23)
 
 
-All __must have__ user stories were acheived, as well as almost all __should have__ user stories. The few __could have__ tasks were not completed, as the amount of time and resources needed in order to fulfill it would vastly outweigh the minor benefit it would bring.
+All __must have__ user stories were acheived, as well as almost all __should have__ user stories. The few __could have__ tasks were not completed, as the amount of time and resources needed in order to fulfill it would vastly outweigh the minor benefit they would bring.
 
 ## Data Model
 
@@ -415,7 +435,7 @@ Below are the records for the manual testing of all functionalities of the appli
 | View Order Details| Test if clicking on an order shows detailed information.| Details load correctly  | Pass|
 | Order Date and Number| Verify that order date and number match with the information in the database, and with the signed in user.| Date and number are correct| Pass|
 
-**Product Management - Main Page**
+**Product Management**
 
 |Test Item|Test Carried Out|Result|Pass/Fail|
 |-------------|------------------|-----------|-------|
