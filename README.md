@@ -114,7 +114,7 @@ The user's rating then remains, unless they change and resubmit. Every time a ne
 
 ![Product Management Landing Page](/media/readme-images/product_management_landing_page.png)
 
-When *Add Product* is clicked, the superuser is taking to a form to complete details of the new product.
+When *Add New Product* is clicked, the superuser is taken to a form, where they can enter details of a new product.
 
 ![Product Management Add Product](/media/readme-images/product_management_add_product.png)
 
@@ -122,7 +122,7 @@ When *View* is clicked, a page showing the details of the product, along with it
 
 ![Product Management Product Details](/media/readme-images/product_management_product_details.png)
 
-When *Edit* is clicked, the superuser is taken to the same form as *Add Product*, but this time prepopulated with the relevant information from the chosen product to be updated.
+When *Edit* is clicked, the superuser is taken to the same form as *Add New Product*, but this time prepopulated with the relevant information from the chosen product to be updated.
 
 ![Product Management Edit Product](/media/readme-images/product_management_edit_product.png)
 
@@ -239,7 +239,7 @@ I initially created a small number of epics, each of which consisted of multiple
  - [USER STORY: Newsletter](https://github.com/DiarmuidHenry/PP5/issues/23)
 
 
-All __must have__ user stories were acheived, as well as almost all __should have__ user stories. The few __could have__ tasks were not completed, as the amount of time and resources needed in order to fulfill it would vastly outweigh the minor benefit they would bring.
+All __must have__ user stories were acheived, as well as almost all __should have__ user stories. The few __could have__ tasks were not completed, as the amount of time and resources needed in order to fulfill them would vastly outweigh the minor benefit they would bring.
 
 ## Data Model
 
@@ -447,7 +447,7 @@ Below are the records for the manual testing of all functionalities of the appli
 | View/Product details page| Check information shown is accurate for clicked product.| Information accurately reflects that stored in the database for the chosen product.| Pass|
 | | Check *Edit*, *Delete* and *Back to Products* buttons leads to correct page for the chosen product.| Buttons works as intended, correct information is shown.| Pass|
 | Edit Product form| Verify that the form only allows correct/valid inputs; that item then appears edited in the database of products.| Form validation functions as intended; edited item appears in place of the older version in database.| Pass|
-| | Clicking *Cancel* leaves the product unchanged.| Remains unchanged is changes aren't saved.| Pass|
+| | Clicking *Cancel* leaves the product unchanged.| Remains unchanged if changes aren't saved.| Pass|
 | Delete Product page| Ensure users can't accidentally delete with 1 incorrect click.| User is asked if they are sure that they want to delete the selected product, before it is removed from database.| Pass|
 | | Clicking *Cancel* leaves the product unchanged.| Product is not deleted, no changes are made.| Pass|
 
